@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import Tab from "./Tab";
 
-export default function Header() {
+const Header = () => {
   return (
     <Container>
       <HeaderContainer>
+        <Tab></Tab>
+
         <Start bg="#ff5421">Start learning today</Start>
         <CoursesText>Online Courses From Leading Experts</CoursesText>
         <Button bg="#ff5421" color="#fff">
@@ -12,7 +15,9 @@ export default function Header() {
       </HeaderContainer>
     </Container>
   );
-}
+};
+
+export default Header;
 
 const Container = styled.div`
   width: 100%;
@@ -32,7 +37,7 @@ const HeaderContainer = styled.div`
 const Start = styled.div`
   font-size: 22px;
   line-height: 30px;
-  font-weight: 500;
+  font-weight: 600;
   color: #ff5421;
   margin-bottom: 22px;
   text-transform: uppercase;
@@ -67,10 +72,6 @@ const Button = styled.button`
   }
 `;
 
-const Image = styled.img`
-  width: 375px;
-  margin-left: 40px;
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    margin: 40px 0 30px;
-  }
+const Tabs = styled.div`
+  font-size: 22px;
 `;
