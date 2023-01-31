@@ -3,26 +3,51 @@ import styled from "styled-components";
 export default function Header() {
   return (
     <Container>
-      <div>
-        <h2>Start learning today</h2>
-        <h1>Online Courses From Leading Experts</h1>
-        <Button bg="yellowgreen" color="#fff">
-          Get Started For Free
+      <HeaderContainer>
+        <Start bg="#ff5421">Start learning today</Start>
+        <CoursesText>Online Courses From Leading Experts</CoursesText>
+        <Button bg="#ff5421" color="#fff">
+          Find Course
         </Button>
-      </div>
-      {/* <Image src="./images/photos/001.jpg" alt="" /> */}
+      </HeaderContainer>
     </Container>
   );
 }
 
 const Container = styled.div`
   width: 100%;
-  height: 850px;
+  height: 750px;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   background-image: url("./images/photos/001.jpg");
   color: white;
+`;
+
+const HeaderContainer = styled.div`
+  color: white;
+`;
+
+const Start = styled.div`
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #ff5421;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+`;
+
+const CoursesText = styled.div`
+  width: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 700;
+  margin-bottom: 65px;
 `;
 
 const Button = styled.button`
@@ -32,6 +57,7 @@ const Button = styled.button`
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
+  text-transform: uppercase;
   padding: 15px 60px;
   background-color: ${({ bg }) => bg || "#fff"};
   color: ${({ color }) => color || "#333"};
