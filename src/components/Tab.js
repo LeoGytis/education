@@ -1,6 +1,7 @@
-import styled from "styled-components";
 import { HeaderTabs } from "../data/text";
 import React from "react";
+import styled from "styled-components";
+import { heartBeat } from "./Animations";
 
 const Tab = () => {
   console.log(HeaderTabs);
@@ -40,6 +41,11 @@ const TabContainer = styled.div`
   border-radius: 5px;
   /* position: relative;
   transition: all 0.3s ease; */
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
 `;
 
 const Icon = styled.img.attrs(({ src }) => ({
@@ -49,6 +55,12 @@ const Icon = styled.img.attrs(({ src }) => ({
   max-width: 50px;
   width: 100%;
   margin-right: 20px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+  animation: ${heartBeat} 4s linear infinite;
 `;
 
 const Text = styled.div``;
