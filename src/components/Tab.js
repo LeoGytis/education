@@ -7,14 +7,13 @@ const Tab = () => {
   return (
     <Container>
       {HeaderTabs.map((tab, i) => {
-        console.log("first", ++i);
         return (
           <TabContainer key={`tabcontainer-${i}`}>
-            <Icon src={i}></Icon>
-            <>
+            <Icon src={++i}></Icon>
+            <Text>
               <Header>{tab.header}</Header>
               <Description>{tab.description}</Description>
-            </>
+            </Text>
           </TabContainer>
         );
       })}
@@ -25,28 +24,34 @@ const Tab = () => {
 export default Tab;
 
 const Container = styled.div`
-  width: 100%;
-  height: 50;
   display: flex;
   justify-content: space-evenly;
-  border: 2px solid skyblue;
+  width: 100%;
+  max-width: 960px;
 `;
 
 const TabContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   background: #171f32;
+  padding: 20px 15px;
   margin: 10px;
+  border-radius: 5px;
+  /* position: relative;
+  transition: all 0.3s ease; */
 `;
 
 const Icon = styled.img.attrs(({ src }) => ({
   src: `./images/icons/00${src}` + `.png`,
   alt: ""
 }))`
+  max-width: 50px;
   width: 100%;
-  height: 150px;
+  margin-right: 20px;
 `;
+
+const Text = styled.div``;
 
 const Header = styled.div`
   display: flex;

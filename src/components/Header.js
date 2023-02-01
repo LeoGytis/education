@@ -5,13 +5,12 @@ const Header = () => {
   return (
     <Container>
       <HeaderContainer>
-        <Tab></Tab>
-
         <Start bg="#ff5421">Start learning today</Start>
         <CoursesText>Online Courses From Leading Experts</CoursesText>
         <Button bg="#ff5421" color="#fff">
           Find Course
         </Button>
+        <Tab></Tab>
       </HeaderContainer>
     </Container>
   );
@@ -56,13 +55,13 @@ const CoursesText = styled.div`
 `;
 
 const Button = styled.button`
-  border-radius: 50px;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
   padding: 15px 60px;
   background-color: ${({ bg }) => bg || "#fff"};
   color: ${({ color }) => color || "#333"};
@@ -70,8 +69,5 @@ const Button = styled.button`
     opacity: 0.9;
     transform: scale(0.98);
   }
-`;
-
-const Tabs = styled.div`
-  font-size: 22px;
+  margin-bottom: 50px;
 `;
