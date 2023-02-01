@@ -7,10 +7,10 @@ const Tab = () => {
   return (
     <Container>
       {HeaderTabs.map((tab, i) => {
+        console.log("first", ++i);
         return (
           <TabContainer key={`tabcontainer-${i}`}>
-            <Icon></Icon>
-
+            <Icon src={i}></Icon>
             <>
               <Header>{tab.header}</Header>
               <Description>{tab.description}</Description>
@@ -40,8 +40,12 @@ const TabContainer = styled.div`
   margin: 10px;
 `;
 
-const Icon = styled.div`
-  font-size: 22px;
+const Icon = styled.img.attrs(({ src }) => ({
+  src: `./images/icons/00${src}` + `.png`,
+  alt: ""
+}))`
+  width: 100%;
+  height: 150px;
 `;
 
 const Header = styled.div`
