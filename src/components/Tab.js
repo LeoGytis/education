@@ -1,7 +1,7 @@
 import { HeaderTabs } from "../data/text";
 import React from "react";
 import styled from "styled-components";
-import { heartBeat } from "./Animations";
+import { waveBeat } from "./Animations";
 
 const Tab = () => {
   console.log(HeaderTabs);
@@ -10,7 +10,12 @@ const Tab = () => {
       {HeaderTabs.map((tab, i) => {
         return (
           <TabContainer key={`tabcontainer-${i}`}>
-            <Icon src={++i}></Icon>
+            {/* <Icon src={++i} delay={++j}></Icon> */}
+            <Icon
+              src={`./images/icons/00${++i}` + `.png`}
+              delay={i}
+              alt=""
+            ></Icon>
             <Text>
               <Header>{tab.header}</Header>
               <Description>{tab.description}</Description>
@@ -48,10 +53,11 @@ const TabContainer = styled.div`
   }
 `;
 
-const Icon = styled.img.attrs(({ src }) => ({
-  src: `./images/icons/00${src}` + `.png`,
-  alt: ""
-}))`
+// const Icon = styled.img.attrs(({ src, delay }) => ({
+//   src: `./images/icons/00${src}` + `.png`,
+//   alt: ""
+// }))`
+const Icon = styled.img`
   max-width: 50px;
   width: 100%;
   margin-right: 20px;
@@ -60,7 +66,13 @@ const Icon = styled.img.attrs(({ src }) => ({
     opacity: 0.9;
     transform: scale(1.2);
   }
-  animation: ${heartBeat} 4s linear infinite;
+  animation-name: ${waveBeat};
+  animation-duration: 1s;
+  animation-delay: ${({ delay }) => delay * 1.2 + "s"};
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* animation: ${waveBeat} 1s linear infinite; */
 `;
 
 const Text = styled.div``;

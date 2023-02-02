@@ -40,3 +40,30 @@ export const heartBeat = keyframes`
     transform: scale( .75 );
   }
 `;
+
+export const waveBeat = keyframes`
+  0%
+  {
+    transform: scale( 1);
+  }
+  20%
+  {
+    transform: scale( 1.2 );
+  }
+  /* 40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1.1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  } */
+  100%
+  {
+    transform: scale( 1 );
+  }
+`;
