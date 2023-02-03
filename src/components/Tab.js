@@ -62,7 +62,7 @@ const Icon = styled.img`
   }
   animation-name: ${waveBeat};
   animation-duration: 3s;
-  animation-delay: ${({ delay }) => delay * 0.3 + "s"};
+  animation-delay: ${({ delay }) => delay * 0.5 + "s"};
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
