@@ -10,7 +10,6 @@ const Tab = () => {
       {HeaderTabs.map((tab, i) => {
         return (
           <TabContainer key={`tabcontainer-${i}`}>
-            {/* <Icon src={++i} delay={++j}></Icon> */}
             <Icon
               src={`./images/icons/00${++i}` + `.png`}
               delay={i}
@@ -44,8 +43,7 @@ const TabContainer = styled.div`
   padding: 20px 15px;
   margin: 10px;
   border-radius: 5px;
-  /* position: relative;
-  transition: all 0.3s ease; */
+
   &:hover {
     cursor: pointer;
     opacity: 0.9;
@@ -53,10 +51,6 @@ const TabContainer = styled.div`
   }
 `;
 
-// const Icon = styled.img.attrs(({ src, delay }) => ({
-//   src: `./images/icons/00${src}` + `.png`,
-//   alt: ""
-// }))`
 const Icon = styled.img`
   max-width: 50px;
   width: 100%;
@@ -67,12 +61,11 @@ const Icon = styled.img`
     transform: scale(1.2);
   }
   animation-name: ${waveBeat};
-  animation-duration: 1s;
-  animation-delay: ${({ delay }) => delay * 1.2 + "s"};
+  animation-duration: 3s;
+  animation-delay: ${({ delay }) => delay * 0.3 + "s"};
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  /* animation: ${waveBeat} 1s linear infinite; */
 `;
 
 const Text = styled.div``;
