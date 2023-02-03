@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { waveBeat } from "./Animations";
 
 const Tab = () => {
-  console.log(HeaderTabs);
   return (
     <Container>
       {HeaderTabs.map((tab, i) => {

@@ -10,7 +10,7 @@ const Header = () => {
         <Button bg="#ff5421" color="#fff">
           Find Course
         </Button>
-        <Tab></Tab>
+        <Tab />
       </HeaderContainer>
     </Container>
   );
