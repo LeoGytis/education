@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import HamburgerSvg from "../components/Hamburger.svg";
+import { ReactComponent as HamburgerSvg } from "../data/Hamburger.svg";
 
 const Navbar = () => {
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
         </NavTabs>
         <NavTools>Search Cart Login</NavTools>
         <HamContainer>
-          <Hamburger src={HamburgerSvg} alt=""></Hamburger>
+          <Hamburger />
         </HamContainer>
       </Container>
     </>
@@ -62,10 +62,14 @@ const NavTools = styled.div`
 
 const HamContainer = styled.div`
   display: flex;
+  justify-content: flex-end;
   max-width: 100%;
-  width: 18%;
-  max-height: 30px;
+  height: 40px;
   border: 2px dashed skyblue;
 `;
 
-const Hamburger = styled.img``;
+const Hamburger = styled(HamburgerSvg)`
+  max-height: 30px;
+  color: white;
+  background-color: white;
+`;
