@@ -5,11 +5,11 @@ export const waveBeat = keyframes`
   {
     transform: scale( 1);
   }
-  10%
+  15%
   {
     transform: scale( 1.3 );
   }
-  20%
+  30%
   {
     transform: scale( 1 );
   }
