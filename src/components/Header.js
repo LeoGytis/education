@@ -19,12 +19,12 @@ const Header = () => {
 export default Header;
 
 const Container = styled.div`
-  width: 100%;
-  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
+  height: 750px;
   background-image: url("./images/photos/001.jpg");
   color: white;
 `;

@@ -5,19 +5,23 @@ const Navbar = () => {
   return (
     <>
       <Container>
-        <Logo src={`./images/educavo_logo.png`} alt="" />
-        <NavTabs>
-          <NavTab>Home</NavTab>
-          <NavTab>About</NavTab>
-          <NavTab>Courses</NavTab>
-          <NavTab>Pages</NavTab>
-          <NavTab>Blog</NavTab>
-          <NavTab>Contact</NavTab>
-        </NavTabs>
-        <NavTools>Search Cart Login</NavTools>
-        <HamContainer>
-          <Hamburger />
-        </HamContainer>
+        <Logo src={`./images/educavo_logo.png`} alt="" href="#" />
+        <NavMenu>
+          <MenuItem>Home</MenuItem>
+          <MenuItem>About</MenuItem>
+          <MenuItem>Courses</MenuItem>
+          <MenuItem>Pages</MenuItem>
+          <MenuItem>Blog</MenuItem>
+          <MenuItem>Contact</MenuItem>
+        </NavMenu>
+        <NavTools>
+          <ToolItem>Search</ToolItem>
+          <ToolItem>Cart</ToolItem>
+          <ToolItem>Login</ToolItem>
+          <HamContainer>
+            <Hamburger />
+          </HamContainer>
+        </NavTools>
       </Container>
     </>
   );
@@ -29,35 +33,43 @@ const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
-  height: 70px;
-  color: white;
-  border: 2px solid red;
+  width: 100%;
   background-color: yellowgreen;
 `;
 
 const Logo = styled.img`
   display: flex;
-  max-width: 100%;
-  width: 18%;
-  max-height: 30px;
+  width: 200px;
+  padding: 30px 0 30px 0;
   height: auto;
   &:hover {
     cursor: pointer;
   }
 `;
 
-const NavTabs = styled.div`
+const NavMenu = styled.div`
   display: flex;
   justify-content: space-evenly;
 `;
 
-const NavTab = styled.div`
-  color: white;
+const MenuItem = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const NavTools = styled.div`
-  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+const ToolItem = styled.div`
+  padding: 5px;
 `;
 
 const HamContainer = styled.div`
@@ -65,11 +77,17 @@ const HamContainer = styled.div`
   justify-content: flex-end;
   max-width: 100%;
   height: 40px;
-  border: 2px dashed skyblue;
 `;
 
 const Hamburger = styled(HamburgerSvg)`
-  max-height: 30px;
-  color: white;
-  background-color: white;
+  max-height: 20px;
+  padding: 10px;
+  fill: white;
+  background-color: none;
+  height: ${({ heigth }) => heigth || "40px"};
+  &:hover {
+    cursor: pointer;
+    fill: ${({ hoverColor }) => hoverColor || "#ff5421"};
+  }
+  transition: all 0.3s ease;
 `;
