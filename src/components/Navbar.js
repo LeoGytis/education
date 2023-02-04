@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import { ReactComponent as HamburgerSvg } from "../data/Hamburger.svg";
+import { ReactComponent as SearchSvg } from "../data/search_1.svg";
+import { ReactComponent as CartSvg } from "../data/cart_1.svg";
+import { ReactComponent as UserSvg } from "../data/user_4.svg";
 
 const Navbar = () => {
   return (
     <>
       <Container>
-        <Logo src={`./images/educavo_logo.png`} alt="" href="#" />
+        <Logo src={`./images/educavo_logo.png`} alt="" />
         <NavMenu>
           <MenuItem>Home</MenuItem>
           <MenuItem>About</MenuItem>
@@ -15,9 +18,9 @@ const Navbar = () => {
           <MenuItem>Contact</MenuItem>
         </NavMenu>
         <NavTools>
-          <ToolItem>Search</ToolItem>
-          <ToolItem>Cart</ToolItem>
-          <ToolItem>Login</ToolItem>
+          <SearchTool>Search</SearchTool>
+          <CartTool>Cart</CartTool>
+          <UserTool>User</UserTool>
           <HamContainer>
             <Hamburger />
           </HamContainer>
@@ -53,12 +56,31 @@ const NavMenu = styled.div`
 `;
 
 const MenuItem = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 2px;
   margin: 15px;
   &:hover {
     cursor: pointer;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff5421;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
   }
 `;
 
@@ -68,8 +90,43 @@ const NavTools = styled.div`
   align-items: center;
 `;
 
-const ToolItem = styled.div`
-  padding: 5px;
+const SearchTool = styled(SearchSvg)`
+  width: 100%;
+  height: 25px;
+  padding: 10px;
+  fill: white;
+  background-color: none;
+  &:hover {
+    cursor: pointer;
+    fill: #ff5421;
+  }
+  transition: all 0.5s ease;
+`;
+
+const CartTool = styled(CartSvg)`
+  width: 100%;
+  height: 25px;
+  padding: 10px;
+  fill: white;
+  &:hover {
+    cursor: pointer;
+    fill: #ff5421;
+  }
+  transition: all 0.5s ease;
+`;
+
+const UserTool = styled(UserSvg)`
+  width: 100%;
+  height: 25px;
+  padding: 10px;
+  fill: white;
+  background-color: none;
+
+  &:hover {
+    cursor: pointer;
+    fill: #ff5421;
+  }
+  transition: all 0.5s ease;
 `;
 
 const HamContainer = styled.div`
@@ -89,5 +146,5 @@ const Hamburger = styled(HamburgerSvg)`
     cursor: pointer;
     fill: ${({ hoverColor }) => hoverColor || "#ff5421"};
   }
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 `;
