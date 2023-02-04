@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as HamburgerSvg } from "../data/Hamburger.svg";
-import { ReactComponent as SearchSvg } from "../data/search_1.svg";
-import { ReactComponent as CartSvg } from "../data/cart_1.svg";
-import { ReactComponent as UserSvg } from "../data/user_4.svg";
-import Icons from "../data/Icons";
+import Icons from "../utils/Icons";
 
 const Navbar = () => {
   return (
@@ -99,44 +96,6 @@ const StyledIcon = styled(Icons)`
   &:hover {
     cursor: pointer;
     color: #ff5421;
-  }
-`;
-
-const SearchTool = styled(SearchSvg)`
-  width: 100%;
-  height: 25px;
-  padding: 10px;
-  fill: white;
-  background-color: none;
-  &:hover {
-    cursor: pointer;
-    fill: #ff5421;
-  }
-  transition: all 0.5s ease;
-`;
-
-const CartTool = styled(CartSvg)`
-  width: 100%;
-  height: 25px;
-  padding: 10px;
-  fill: white;
-  &:hover {
-    cursor: pointer;
-    fill: #ff5421;
-  }
-  transition: all 0.5s ease;
-`;
-
-const UserTool = styled(UserSvg)`
-  width: 100%;
-  height: 25px;
-  padding: 10px;
-  fill: white;
-  background-color: none;
-
-  &:hover {
-    cursor: pointer;
-    fill: #ff5421;
   }
   transition: all 0.5s ease;
 `;
