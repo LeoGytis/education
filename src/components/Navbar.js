@@ -3,6 +3,7 @@ import { ReactComponent as HamburgerSvg } from "../data/Hamburger.svg";
 import { ReactComponent as SearchSvg } from "../data/search_1.svg";
 import { ReactComponent as CartSvg } from "../data/cart_1.svg";
 import { ReactComponent as UserSvg } from "../data/user_4.svg";
+import Icons from "../data/Icons";
 
 const Navbar = () => {
   return (
@@ -18,9 +19,9 @@ const Navbar = () => {
           <MenuItem>Contact</MenuItem>
         </NavMenu>
         <NavTools>
-          <SearchTool>Search</SearchTool>
-          <CartTool>Cart</CartTool>
-          <UserTool>User</UserTool>
+          <StyledIcon name={"search"}></StyledIcon>
+          <StyledIcon name={"shopbag"}></StyledIcon>
+          <StyledIcon name={"profile"}></StyledIcon>
           <HamContainer>
             <Hamburger />
           </HamContainer>
@@ -88,6 +89,17 @@ const NavTools = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+`;
+
+const StyledIcon = styled(Icons)`
+  font-size: 1.6rem;
+  padding: 5px;
+  color: #fff;
+  vertical-align: middle;
+  &:hover {
+    cursor: pointer;
+    color: #ff5421;
+  }
 `;
 
 const SearchTool = styled(SearchSvg)`

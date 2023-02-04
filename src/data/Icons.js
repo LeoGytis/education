@@ -1,25 +1,18 @@
-import {
-  TiArrowSortedDown,
-  TiArrowSortedUp,
-  TiArrowUnsorted,
-  TiThMenu
-} from "react-icons/ti";
-import { VscVerified } from "react-icons/vsc";
-import { RiArrowDownSLine, RiMap2Fill, RiTempColdLine } from "react-icons/ri";
+import { HiSearch } from "react-icons/hi";
+import { CgProfile } from "react-icons/cg";
+import { BiShoppingBag } from "react-icons/bi";
 
-const Icon = ({ name, className }) => {
+const Icons = ({ name, className }) => {
   switch (name) {
-    case "temp":
-      return <RiTempColdLine className={className} />;
-    case "layer":
-      return <BsLayersHalf className={className} />;
-    case "fullscreen":
-      return <MdOutlineFullscreen className={className} />;
-    case "exitFullScreen":
-      return <MdOutlineFullscreenExit className={className} />;
+    case "search":
+      return <HiSearch className={className} />;
+    case "shopbag":
+      return <BiShoppingBag className={className} />;
+    case "profile":
+      return <CgProfile className={className} />;
     default:
       return null;
   }
 };
 
-export default Icon;
+export default Icons;
