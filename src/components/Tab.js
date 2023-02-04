@@ -1,7 +1,7 @@
 import { HeaderTabs } from "../utils/text";
 import React from "react";
 import styled from "styled-components";
-import { waveBeat } from "./Animations";
+import { waveBeat } from "../utils/Animations";
 
 const Tab = () => {
   return (
