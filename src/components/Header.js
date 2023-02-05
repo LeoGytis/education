@@ -27,6 +27,7 @@ const Container = styled.div`
   height: 750px;
   background-image: url("./images/photos/001.jpg");
   color: white;
+  color: rgba(0, 0, 0, 0.9);
 `;
 
 const HeaderContainer = styled.div`

@@ -6,8 +6,8 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      {/* <Navbar></Navbar> */}
-      {/* <Header></Header> */}
+      <Navbar></Navbar>
+      <Header></Header>
       <Categories />
     </>
   );
