@@ -8,21 +8,23 @@ const Categories = () => {
         <Header1 bg="#ff5421">Top categories</Header1>
         <Header2>Popular Online Categories</Header2>
         <CategoriesContainer>
-          {categoriesInfo.map((tab, i = 3) => {
+          {categoriesInfo.map((tab, i) => {
+            i += 1;
             return (
               <Categorie
                 key={`tabcontainer-${i}`}
                 image={`./images/photos/00${++i}` + `.jpg`}
+                alt={tab.header}
               >
                 <Icon
                   src={`./images/icons/00${++i}` + `.png`}
                   delay={i}
                   alt=""
                 ></Icon>
-                <>
+                <Text>
                   <Header>{tab.header}</Header>
                   <CoursesCount>{tab.coursesCount}</CoursesCount>
-                </>
+                </Text>
               </Categorie>
             );
           })}
@@ -43,7 +45,6 @@ const Container = styled.div`
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 750px;
   color: #101010;
 `;
 
@@ -68,8 +69,6 @@ const Header2 = styled.div`
   font-size: 36px;
   line-height: 46px;
   font-weight: 800;
-  margin-bottom: 65px;
-
   color: #101010;
 `;
 
@@ -83,14 +82,18 @@ const CategoriesContainer = styled.div`
 const Categorie = styled.div`
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
   background: #171f32;
+  height: 300px;
   padding: 20px 15px;
   margin: 10px;
   border-radius: 5px;
   border: 1px solid yellowgreen;
-  background-image: ${({ image }) => image || "none"};
-  background-image: url("./images/photos/001.jpg");
+  background-image: url(${({ image }) => image || "none"});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: cover;
 
   &:hover {
     cursor: pointer;
@@ -128,8 +131,11 @@ const Button = styled.button`
   margin-bottom: 10px;
 `;
 
+const Text = styled.div``;
+
 const Header = styled.div`
   display: flex;
+  flex-direction: flex-start;
   width: 100%;
   font-size: 22px;
   font-weight: 700;
@@ -137,6 +143,8 @@ const Header = styled.div`
 `;
 
 const CoursesCount = styled.div`
+  display: flex;
+  flex-direction: flex-start;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
