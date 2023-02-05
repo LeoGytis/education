@@ -33,7 +33,7 @@ const HeaderContainer = styled.div`
 const Header1 = styled.div`
   font-size: 18px;
   line-height: 28px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 10px;
   color: #ff5421;
   text-transform: uppercase;
@@ -44,28 +44,28 @@ const Header2 = styled.div`
   justify-content: center;
   align-items: center;
   width: 750px;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 46px;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 65px;
 
   color: #101010;
 `;
 
 const Button = styled.button`
+  display: inline-block;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  padding: 15px 60px;
+  padding: 15px 20px;
   background-color: ${({ bg }) => bg || "#fff"};
   color: ${({ color }) => color || "#333"};
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);
   }
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 `;
