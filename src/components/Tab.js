@@ -1,4 +1,4 @@
-import { HeaderTabs } from "../utils/text";
+import { HeaderTabsInfo } from "../utils/text";
 import React from "react";
 import styled from "styled-components";
 import { waveBeat } from "../utils/Animations";
@@ -6,7 +6,7 @@ import { waveBeat } from "../utils/Animations";
 const Tab = () => {
   return (
     <Container>
-      {HeaderTabs.map((tab, i) => {
+      {HeaderTabsInfo.map((tab, i) => {
         return (
           <TabContainer key={`tabcontainer-${i}`}>
             <Icon
