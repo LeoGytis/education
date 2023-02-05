@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as HamburgerSvg } from "../data/Hamburger.svg";
+import { ReactComponent as HamburgerSvg } from "../utils/Hamburger.svg";
 import Icons from "../utils/Icons";
 
 const Navbar = () => {

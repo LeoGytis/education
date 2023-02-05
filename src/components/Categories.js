@@ -1,22 +1,20 @@
 import styled from "styled-components";
-import Tab from "./Tab";
 
-const Header = () => {
+const Categories = () => {
   return (
     <Container>
       <HeaderContainer>
-        <Header1 bg="#ff5421">Start learning today</Header1>
-        <Header2>Online Courses From Leading Experts</Header2>
+        <Header1 bg="#ff5421">Top categories</Header1>
+        <Header2>Popular Online Categories</Header2>
         <Button bg="#ff5421" color="#fff">
-          Find Course
+          View all categories
         </Button>
-        <Tab />
       </HeaderContainer>
     </Container>
   );
 };
 
-export default Header;
+export default Categories;
 
 const Container = styled.div`
   display: flex;
@@ -25,8 +23,7 @@ const Container = styled.div`
   text-align: center;
   width: 100%;
   height: 750px;
-  background-image: url("./images/photos/001.jpg");
-  color: white;
+  color: #101010;
 `;
 
 const HeaderContainer = styled.div`
@@ -48,6 +45,7 @@ const Header2 = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #101010;
   font-size: 70px;
   line-height: 80px;
   font-weight: 700;
