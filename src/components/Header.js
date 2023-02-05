@@ -4,14 +4,12 @@ import Tab from "./Tab";
 const Header = () => {
   return (
     <Container>
-      <HeaderContainer>
-        <Header1 bg="#ff5421">Start learning today</Header1>
-        <Header2>Online Courses From Leading Experts</Header2>
-        <Button bg="#ff5421" color="#fff">
-          Find Course
-        </Button>
-        <Tab />
-      </HeaderContainer>
+      <Header1 bg="#ff5421">Start learning today</Header1>
+      <Header2>Online Courses From Leading Experts</Header2>
+      <Button bg="#ff5421" color="#fff">
+        Find Course
+      </Button>
+      <Tab />
     </Container>
   );
 };
@@ -20,17 +18,15 @@ export default Header;
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
+  padding-top: 30px;
+  padding-bottom: 100px;
   height: 750px;
   background-image: url("./images/photos/001.jpg");
-  color: white;
-  color: rgba(0, 0, 0, 0.9);
-`;
-
-const HeaderContainer = styled.div`
   color: white;
 `;
 
@@ -60,14 +56,13 @@ const Button = styled.button`
   text-transform: uppercase;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   padding: 15px 60px;
-  background-color: ${({ bg }) => bg || "#fff"};
-  color: ${({ color }) => color || "#333"};
+  margin-bottom: 50px;
+  background-color: #ff5421;
+  color: white;
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);
   }
-  margin-bottom: 50px;
 `;
