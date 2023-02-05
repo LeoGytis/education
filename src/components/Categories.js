@@ -31,25 +31,25 @@ const HeaderContainer = styled.div`
 `;
 
 const Header1 = styled.div`
-  font-size: 22px;
-  line-height: 30px;
-  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
   color: #ff5421;
-  margin-bottom: 22px;
   text-transform: uppercase;
 `;
 
 const Header2 = styled.div`
-  width: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: #101010;
-  font-size: 70px;
-  line-height: 80px;
-  font-weight: 700;
+  width: 750px;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 900;
   margin-bottom: 65px;
+
+  color: #101010;
 `;
 
 const Button = styled.button`

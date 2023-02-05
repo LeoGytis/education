@@ -47,7 +47,6 @@ const Header2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   font-size: 70px;
   line-height: 80px;
   font-weight: 700;
