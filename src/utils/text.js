@@ -45,7 +45,7 @@ export const coursesInfo = [
     header: "Fitness Development Strategy Buildup Laoreet",
     students: "25 Students",
     lessons: "6 Lessons",
-    price: "free"
+    price: "20"
   },
   {
     header: "Artificial Intelligence Fundamental Startup Justo",

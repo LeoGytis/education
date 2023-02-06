@@ -17,6 +17,7 @@ const Courses = () => {
                 image={`./images/photos/01${-1 + ++i}` + `.jpg`}
                 alt={course.header}
               />
+              <PriceTag>{course.price}€</PriceTag>
               <Content>
                 <Rating>
                   <Star name={"star"} />
@@ -83,7 +84,7 @@ const CoursesContainer = styled.div`
   grid-template-rows: auto auto;
   width: 100%;
   max-width: 1200px;
-  gap: 10px;
+  gap: 20px;
   margin-bottom: 34px;
 `;
 
@@ -91,9 +92,12 @@ const Course = styled.div`
   font-size: 36px;
   line-height: 46px;
   font-weight: 800;
+  border-radius: 4px;
   color: #101010;
   margin-bottom: 26px;
   background-color: #fff;
+  border: 1px solid #b9b8b1;
+  position: relative;
   overflow: hidden;
 `;
 
@@ -101,7 +105,7 @@ const Image = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 300px;
+  height: 200px;
   padding: 30px 20px;
   background-image: url(${({ image }) => image || "none"});
   background-position: center;
@@ -115,13 +119,24 @@ const Image = styled.div`
   transition: all 0.5s ease-out;
 `;
 
+const PriceTag = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background: #ff5421;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0px 20px;
+`;
+
 const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 35px 35px;
+  z-index: 20;
   overflow: hidden;
-  z-index: 1;
-  border: 1px solid red;
 `;
 
 const Rating = styled.div`
