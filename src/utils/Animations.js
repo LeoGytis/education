@@ -13,7 +13,18 @@ export const waveBeat = keyframes`
   {
     transform: scale( 1 );
   }
-  100%
+`;
+
+export const iconPop = keyframes`
+  0%
+  {
+    transform: scale( 1);
+  }
+  15%
+  {
+    transform: scale( 1.5 );
+  }
+  30%
   {
     transform: scale( 1 );
   }

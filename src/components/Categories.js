@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { iconPop } from "../utils/Animations";
 import { categoriesInfo } from "../utils/text";
 
 const Categories = () => {
@@ -71,7 +72,6 @@ const CategoriesContainer = styled.div`
   grid-template-rows: auto auto;
   width: 100%;
   max-width: 1200px;
-
   gap: 10px;
   margin-bottom: 34px;
 `;
@@ -94,6 +94,7 @@ const Categorie = styled.div`
     cursor: pointer;
     opacity: 0.9;
     transform: scale(0.98);
+    transition: all 1s ease;
   }
 `;
 
@@ -104,7 +105,18 @@ const Content = styled.div`
 const Icon = styled.img`
   max-width: 42px;
   max-height: 42px;
-  margin-right: 20px;
+  margin: 0 30px 0 10px;
+
+  ${Categorie}:hover & {
+    animation-name: ${iconPop};
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+
+    /* transform: scale(1.4);
+    transition: all 1s ease;
+    animation: hover 1s ease-in-out forwards; */
+  }
 `;
 
 const Text = styled.div`

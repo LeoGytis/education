@@ -27,6 +27,10 @@ const Container = styled.div`
   padding-bottom: 100px;
   height: 750px;
   background-image: url("./images/photos/001.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: cover;
   color: white;
 `;
 
