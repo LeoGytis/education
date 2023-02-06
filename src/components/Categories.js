@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { iconPop } from "../utils/Animations";
+import { iconPop, textPop, waveBeat } from "../utils/Animations";
 import { categoriesInfo } from "../utils/text";
 
 const Categories = () => {
@@ -92,9 +92,8 @@ const Categorie = styled.div`
   box-shadow: inset 100px 0px 100px 5px rgba(0, 0, 0, 0.9);
   &:hover {
     cursor: pointer;
-    opacity: 0.9;
     transform: scale(0.98);
-    transition: all 1s ease;
+    transition: all 0.5s ease;
   }
 `;
 
@@ -106,16 +105,12 @@ const Icon = styled.img`
   max-width: 42px;
   max-height: 42px;
   margin: 0 30px 0 10px;
-
   ${Categorie}:hover & {
     animation-name: ${iconPop};
     animation-duration: 2s;
+    animation-delay: 0.2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
-
-    /* transform: scale(1.4);
-    transition: all 1s ease;
-    animation: hover 1s ease-in-out forwards; */
   }
 `;
 
@@ -127,6 +122,13 @@ const Header = styled.div`
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 5px;
+  ${Categorie}:hover & {
+    animation-name: ${waveBeat};
+    animation-duration: 2s;
+    animation-delay: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
 `;
 
 const CoursesCount = styled.div`
