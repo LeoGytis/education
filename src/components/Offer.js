@@ -4,7 +4,7 @@ import { offerInfo } from "../utils/text";
 const Offer = () => {
   return (
     <Container>
-      <LeftSide></LeftSide>
+      <LeftSide />
       <RightSide>
         <Content>
           <Header1>20% Offer Running - Join Today</Header1>

@@ -1,88 +1,84 @@
 import styled from "styled-components";
-import { offerInfo } from "../utils/text";
+import { offerInfo, questionsInfo } from "../utils/text";
 
-const Offer = () => {
+const Faq = () => {
   return (
     <Container>
-      <LeftSide></LeftSide>
-      <RightSide>
-        <Content>
-          <Header1>20% Offer Running - Join Today</Header1>
-          <Header2>{offerInfo}</Header2>
-          <Button>Register Now</Button>
-        </Content>
-      </RightSide>
+      <Content>
+        <LeftSide>
+          <Header>Frequently Asked Questions</Header>
+          <QuestionsContainer>
+            {questionsInfo.map((question, i) => {
+              return (
+                <Question key={`Questioncontainer-${i}`}>
+                  {question.question}
+                </Question>
+              );
+            })}
+          </QuestionsContainer>
+        </LeftSide>
+        <RightSide></RightSide>
+      </Content>
     </Container>
   );
 };
 
-export default Offer;
+export default Faq;
 
 const Container = styled.div`
   display: flex;
-  width: 100%;
-  max-height: 600px;
+  align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
 `;
 
-const LeftSide = styled.div`
-  width: 50%;
-  height: 600px;
-  background-image: url("./images/photos/020.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
-const RightSide = styled.div`
-  display: flex;
-
-  width: 50%;
-  background-image: url("./images/photos/021.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
 const Content = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 600px;
+  margin: 100px;
+`;
+
+const LeftSide = styled.div`
+  display: flex;
   flex-direction: column;
-  padding: 130px 70px;
-  margin-bottom: 34px;
-  color: #fff;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 600px;
+  background-color: #f9f8f8;
 `;
 
-const Header1 = styled.div`
+const Header = styled.div`
   max-width: 400px;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 46px;
-  font-weight: 800;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 26px;
 `;
 
-const Header2 = styled.div`
+const QuestionsContainer = styled.div`
   max-width: 400px;
   font-size: 16px;
   line-height: 26px;
   margin-bottom: 40px;
 `;
 
-const Button = styled.button`
-  display: flex;
-  justify-content: center;
-  max-width: 200px;
-  font-size: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-  border-radius: 5px;
-  padding: 16px 35px;
-  border: none;
-  cursor: pointer;
-  background-color: #ff5421;
-  color: #fff;
-  &:hover {
-    opacity: 0.9;
-    transform: scale(0.98);
-  }
+const Question = styled.div`
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 46px;
+  font-weight: 800;
+  margin-bottom: 10px;
+`;
+
+const RightSide = styled.div`
+  height: 600px;
+  width: 50%;
+  background-image: url("./images/photos/030.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;

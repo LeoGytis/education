@@ -81,3 +81,25 @@ export const coursesInfo = [
 
 export const offerInfo =
   "We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of your moment, so blinded by desire those who fail in their duty through weakness. These cases are perfectly simple and easy every pleasure is to be welcomed and every pain avoided.";
+
+export const questionsInfo = [
+  {
+    question: "What are the requirements ?",
+    answer:
+      "While a bachelor's degree in education is the minimum level of education you'll need to become a teacher, you have many options as to what and where you'll teach. You can specialize in special education, secondary education, middle-level education, or early childhood education."
+  },
+  {
+    question: "Does Educavo offer free courses?",
+    answer: "No, it doesn't offer free courses."
+  },
+  {
+    question: "What is the transfer application?",
+    answer:
+      "The transfer application is the process of applying for a transfer from one school, program, or organization to another. This typically involves providing transcripts and other documents to show your qualifications and eligibility for transfer."
+  },
+  {
+    question: "What is distance education?",
+    answer:
+      "Distance education refers to a mode of learning where students receive instruction and engage in coursework remotely, typically through online methods such as websites, email, and video conferencing."
+  }
+];
