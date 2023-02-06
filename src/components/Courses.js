@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { iconPop, waveBeat } from "../utils/Animations";
 import Icons from "../utils/Icons";
 import { coursesInfo } from "../utils/text";
 
