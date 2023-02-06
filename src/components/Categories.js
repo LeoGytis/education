@@ -8,12 +8,12 @@ const Categories = () => {
       <Header1>Top categories</Header1>
       <Header2>Popular Online Categories</Header2>
       <CategoriesContainer>
-        {categoriesInfo.map((tab, i) => {
+        {categoriesInfo.map((categorie, i) => {
           return (
             <Categorie
-              key={`tabcontainer-${i}`}
+              key={`categoriecontainer-${i}`}
               image={`./images/photos/00${1 + ++i}` + `.jpg`}
-              alt={tab.header}
+              alt={categorie.header}
             >
               <Content>
                 <Icon
@@ -22,8 +22,8 @@ const Categories = () => {
                   alt=""
                 />
                 <Text>
-                  <Header>{tab.header}</Header>
-                  <CoursesCount>{tab.coursesCount}</CoursesCount>
+                  <Header>{categorie.header}</Header>
+                  <CoursesCount>{categorie.coursesCount}</CoursesCount>
                 </Text>
               </Content>
             </Categorie>

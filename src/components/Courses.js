@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { iconPop, waveBeat } from "../utils/Animations";
+import Icons from "../utils/Icons";
 import { coursesInfo } from "../utils/text";
 
 const Courses = () => {
@@ -8,19 +9,31 @@ const Courses = () => {
       <Header1>Select Courses</Header1>
       <Header2>Explore Popular Courses</Header2>
       <CoursesContainer>
-        {coursesInfo.map((tab, i) => {
+        {coursesInfo.map((course, i) => {
           return (
             <Course>
               <Image
-                key={`tabcontainer-${i}`}
+                key={`coursecontainer-${i}`}
                 image={`./images/photos/01${-1 + ++i}` + `.jpg`}
-                alt={tab.header}
+                alt={course.header}
               />
               <Content>
-                <Rating></Rating>
-                <Header>{tab.header}</Header>
-                <StudentsCount>{tab.coursesCount}</StudentsCount>
-                <LessonsCount>{tab.coursesCount}</LessonsCount>
+                <Rating>
+                  <Star name={"star"} />
+                  <Star name={"star"} />
+                  <Star name={"star"} />
+                  <Star name={"star"} />
+                  <Star name={"star"} fill={"#4B4B49"} padding={"10px"} />1
+                  rating
+                </Rating>
+                <Header>{course.header}</Header>
+                <GreyLine />
+                <Counter>
+                  <StudentsCount name={"students"}>
+                    {course.students}
+                  </StudentsCount>
+                  <LessonsCount name={"lessons"}>{course.lessons}</LessonsCount>
+                </Counter>
               </Content>
             </Course>
           );
@@ -77,6 +90,7 @@ const Course = styled.div`
   color: #101010;
   margin-bottom: 26px;
   background-color: #fff;
+  overflow: hidden;
 `;
 
 const Image = styled.div`
@@ -85,8 +99,6 @@ const Image = styled.div`
   justify-content: flex-end;
   height: 300px;
   padding: 30px 20px;
-  margin: 10px;
-  border-radius: 5px;
   background-image: url(${({ image }) => image || "none"});
   background-position: center;
   background-repeat: no-repeat;
@@ -94,30 +106,66 @@ const Image = styled.div`
   background-size: cover;
   &:hover {
     cursor: pointer;
-    transform: scale(0.98);
+    transform: scale(1.02);
     transition: all 0.5s ease;
   }
 `;
 
 const Content = styled.div`
   display: flex;
+  flex-direction: column;
+  padding: 35px 35px;
 `;
 
 const Rating = styled.div`
-  color: #fff;
+  display: flex;
+  width: 100%;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  padding-bottom: 10px;
+`;
+
+const Star = styled(Icons)`
+  fill: ${({ fill }) => fill || "#fcb903"};
+  padding-right: ${({ padding }) => padding || 0};
 `;
 
 const Header = styled.div`
   font-size: 22px;
   font-weight: 700;
-  margin-bottom: 5px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  &:hover {
+    cursor: pointer;
+    color: #ff5421;
+  }
+  transition: all 0.3s ease;
 `;
 
-const StudentsCount = styled.div`
+const GreyLine = styled.div`
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 25px 0 0;
+  padding: 25px 0 0;
+  font-size: 14px;
+  border-top: 1px solid #f4f0f0;
+`;
+
+const Counter = styled.div`
+  display: flex;
+  justify-content: space-between;
   font-size: 16px;
   font-weight: 400;
 `;
-const LessonsCount = styled.div`
+
+const StudentsCount = styled(Icons)`
+  font-size: 16px;
+  font-weight: 400;
+`;
+
+const LessonsCount = styled(Icons)`
   font-size: 16px;
   font-weight: 400;
 `;
