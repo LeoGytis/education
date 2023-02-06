@@ -1,14 +1,16 @@
 import "./App.css";
 import Categories from "./components/Categories";
+import Courses from "./components/Courses";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      {/* <Navbar></Navbar> */}
-      {/* <Header></Header> */}
-      <Categories />
+      {/* <Navbar />
+      <Header />
+      <Categories /> */}
+      <Courses />
     </>
   );
 }

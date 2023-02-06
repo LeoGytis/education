@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Tab from "./Tab";
+import Tabs from "./Tabs";
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
       <Button bg="#ff5421" color="#fff">
         Find Course
       </Button>
-      <Tab />
+      <Tabs />
     </Container>
   );
 };

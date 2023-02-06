@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { iconPop, textPop, waveBeat } from "../utils/Animations";
+import { iconPop, waveBeat } from "../utils/Animations";
 import { categoriesInfo } from "../utils/text";
 
 const Categories = () => {
@@ -20,7 +20,7 @@ const Categories = () => {
                   src={`./images/icons/00${2 + ++i}` + `.png`}
                   delay={i}
                   alt=""
-                ></Icon>
+                />
                 <Text>
                   <Header>{tab.header}</Header>
                   <CoursesCount>{tab.coursesCount}</CoursesCount>

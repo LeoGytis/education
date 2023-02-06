@@ -3,17 +3,13 @@ import React from "react";
 import styled from "styled-components";
 import { waveBeat } from "../utils/Animations";
 
-const Tab = () => {
+const Tabs = () => {
   return (
     <Container>
       {HeaderTabsInfo.map((tab, i) => {
         return (
           <TabContainer key={`tabcontainer-${i}`}>
-            <Icon
-              src={`./images/icons/00${++i}` + `.png`}
-              delay={i}
-              alt=""
-            ></Icon>
+            <Icon src={`./images/icons/00${++i}` + `.png`} delay={i} alt="" />
             <Text>
               <Header>{tab.header}</Header>
               <Description>{tab.description}</Description>
@@ -25,7 +21,7 @@ const Tab = () => {
   );
 };
 
-export default Tab;
+export default Tabs;
 
 const Container = styled.div`
   display: flex;
