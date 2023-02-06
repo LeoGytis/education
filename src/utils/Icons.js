@@ -3,6 +3,8 @@ import { CgProfile } from "react-icons/cg";
 import { BiShoppingBag } from "react-icons/bi";
 import { FaStar } from "react-icons/fa";
 import { GiOpenBook } from "react-icons/gi";
+import { MdOutlineQuestionAnswer } from "react-icons/md";
+import { BsFillPlayCircleFill } from "react-icons/bs";
 
 const Icons = ({ name, className }) => {
   switch (name) {
@@ -18,6 +20,10 @@ const Icons = ({ name, className }) => {
       return <HiUsers className={className} />;
     case "lessons":
       return <GiOpenBook className={className} />;
+    case "faq":
+      return <MdOutlineQuestionAnswer className={className} />;
+    case "play":
+      return <BsFillPlayCircleFill className={className} />;
     default:
       return null;
   }

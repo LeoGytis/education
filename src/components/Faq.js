@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Icons from "../utils/Icons";
 import { offerInfo, questionsInfo } from "../utils/text";
 
 const Faq = () => {
@@ -11,13 +12,16 @@ const Faq = () => {
             {questionsInfo.map((question, i) => {
               return (
                 <Question key={`Questioncontainer-${i}`}>
+                  <Icon name={"faq"} />
                   {question.question}
                 </Question>
               );
             })}
           </QuestionsContainer>
         </LeftSide>
-        <RightSide></RightSide>
+        <RightSide>
+          <PlayIcon name={"play"} />
+        </RightSide>
       </Content>
     </Container>
   );
@@ -71,7 +75,21 @@ const Question = styled.div`
   font-size: 16px;
   line-height: 46px;
   font-weight: 800;
+  color: #fff;
+  background-color: #ff5421;
   margin-bottom: 10px;
+  padding: 15px 20px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+`;
+
+const Icon = styled(Icons)`
+  font-size: 20px;
+  margin-bottom: -3px;
+  margin-right: 8px;
 `;
 
 const RightSide = styled.div`
@@ -81,4 +99,11 @@ const RightSide = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+`;
+
+const PlayIcon = styled(Icons)`
+  font-size: 50px;
+  margin-right: 8px;
+  color: #fff;
+  background: #ff5421;
 `;

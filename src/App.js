@@ -9,11 +9,11 @@ import Offer from "./components/Offer";
 function App() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Header />
       <Categories />
       <Courses />
-      <Offer /> */}
+      <Offer />
       <Faq />
     </>
   );

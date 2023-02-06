@@ -30,7 +30,7 @@ const Courses = () => {
                 <GreyLine />
                 <Counter>
                   <StudentsCount>
-                    <StudentsIcon name={"students"}></StudentsIcon>
+                    <StudentsIcon name={"students"} />
                     {course.students}
                   </StudentsCount>
                   <LessonsCount>
