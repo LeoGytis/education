@@ -2,7 +2,7 @@ import { HiSearch, HiUsers } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
 import { BiShoppingBag } from "react-icons/bi";
 import { FaStar } from "react-icons/fa";
-import { GiPapers } from "react-icons/gi";
+import { GiOpenBook } from "react-icons/gi";
 
 const Icons = ({ name, className }) => {
   switch (name) {
@@ -17,7 +17,7 @@ const Icons = ({ name, className }) => {
     case "students":
       return <HiUsers className={className} />;
     case "lessons":
-      return <GiPapers className={className} />;
+      return <GiOpenBook className={className} />;
     default:
       return null;
   }

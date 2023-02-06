@@ -29,10 +29,14 @@ const Courses = () => {
                 <Header>{course.header}</Header>
                 <GreyLine />
                 <Counter>
-                  <StudentsCount name={"students"}>
+                  <StudentsCount>
+                    <StudentsIcon name={"students"}></StudentsIcon>
                     {course.students}
                   </StudentsCount>
-                  <LessonsCount name={"lessons"}>{course.lessons}</LessonsCount>
+                  <LessonsCount>
+                    {course.lessons}
+                    <LessonsIcon name={"lessons"} />
+                  </LessonsCount>
                 </Counter>
               </Content>
             </Course>
@@ -156,16 +160,32 @@ const GreyLine = styled.div`
 const Counter = styled.div`
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
-  font-weight: 400;
+  align-items: baseline;
 `;
 
-const StudentsCount = styled(Icons)`
-  font-size: 16px;
+const StudentsCount = styled.div`
+  font-size: 14px;
   font-weight: 400;
+
+  color: black;
 `;
 
-const LessonsCount = styled(Icons)`
-  font-size: 16px;
+const LessonsCount = styled.div`
+  font-size: 14px;
   font-weight: 400;
+  color: black;
+`;
+
+const StudentsIcon = styled(Icons)`
+  font-size: 20px;
+  margin-bottom: -3px;
+  color: #ff5421;
+  margin-right: 8px;
+`;
+
+const LessonsIcon = styled(Icons)`
+  font-size: 20px;
+  margin-bottom: -3px;
+  color: #ff5421;
+  margin-left: 8px;
 `;
