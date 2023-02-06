@@ -110,15 +110,18 @@ const Image = styled.div`
   background-size: cover;
   &:hover {
     cursor: pointer;
-    transform: scale(1.02);
-    transition: all 0.5s ease;
+    transform: scale(1.1);
   }
+  transition: all 0.5s ease-out;
 `;
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 35px 35px;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid red;
 `;
 
 const Rating = styled.div`

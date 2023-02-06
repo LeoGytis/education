@@ -93,8 +93,8 @@ const Categorie = styled.div`
   &:hover {
     cursor: pointer;
     transform: scale(0.98);
-    transition: all 0.5s ease;
   }
+  transition: all 0.2s ease;
 `;
 
 const Content = styled.div`
@@ -108,7 +108,7 @@ const Icon = styled.img`
   ${Categorie}:hover & {
     animation-name: ${iconPop};
     animation-duration: 2s;
-    animation-delay: 0.2s;
+    animation-delay: 0.1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
   }
