@@ -109,18 +109,18 @@ export const testimonialText = [
     name: "David Warner",
     speciality: "Web Developer",
     comment:
-      "Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That’s how I would describe Jeramy and his team at The Lorem Ipsum Company. When it comes to content marketing, you’ll definitely get the 5-star treatment from the Lorem Ipsum Company."
+      "As a web developer, it's essential to stay up to date with the latest technologies and programming languages. Good web development requires a strong understanding of user experience and accessibility."
   },
   {
     name: "Mitchel Starc",
     speciality: "App Designer",
     comment:
-      "Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That’s how I would describe Jeramy and his team at The Lorem Ipsum Company. When it comes to content marketing, you’ll definitely get the 5-star treatment from the Lorem Ipsum Company."
+      "As an app developer, it's crucial to understand the platform and its guidelines for which you are developing the app. Creating a user-friendly and intuitive interface is a key aspect of successful app development. Continuously testing and updating the app based on user feedback is also important for its success."
   },
   {
     name: "Steve Smith",
     speciality: "Web Designer",
     comment:
-      "Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That’s how I would describe Jeramy and his team at The Lorem Ipsum Company. When it comes to content marketing, you’ll definitely get the 5-star treatment from the Lorem Ipsum Company."
+      "Web development requires a strong understanding of HTML, CSS, and JavaScript. Keeping up with the latest design trends and web technologies is crucial to stay ahead in the industry. Collaborating with designers, project managers, and clients to bring their vision to life is an important part of the web development process."
   }
 ];
