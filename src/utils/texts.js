@@ -149,13 +149,13 @@ export const newsInfo = [
     place: "Primary",
     date: "2021-02-18",
     user: "admin"
-  },
-  {
-    header: "Oxford vaccine trial resumes in UK after being halted",
-    comment:
-      "We denounce with righteous indige nation and dislike men who are so beguiled...",
-    place: "College",
-    date: "2021-02-27",
-    user: "admin"
   }
+  // {
+  //   header: "Oxford vaccine trial resumes in UK after being halted",
+  //   comment:
+  //     "We denounce with righteous indige nation and dislike men who are so beguiled...",
+  //   place: "College",
+  //   date: "2021-02-27",
+  //   user: "admin"
+  // }
 ];
