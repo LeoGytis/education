@@ -6,12 +6,17 @@ const Testimonial = () => {
     <Container>
       <Header1>Testimonial</Header1>
       <Header2>What Students Saying</Header2>
+      <Text>{testimonialText.comment}</Text>
+
       <Content>
-        <MarkIcon />
-        <Text></Text>
-        <Photo></Photo>
-        <Name></Name>
-        <Speciality></Speciality>
+        <Carousel>
+          <MarkIcon src={"./images/icons/010.png"} alt="" />
+          <Text>{alert(testimonialText[name])}</Text>
+          <Text>TEKSTAS CIA</Text>
+          <Photo></Photo>
+          <Name>{testimonialText.Name}</Name>
+          <Speciality></Speciality>
+        </Carousel>
       </Content>
     </Container>
   );
@@ -21,6 +26,7 @@ export default Testimonial;
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -43,7 +49,7 @@ const Header2 = styled.div`
   font-size: 36px;
   line-height: 46px;
   font-weight: 800;
-  color: #101010;
+  color: #fff;
   margin-bottom: 26px;
 `;
 
@@ -51,49 +57,50 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
   width: 100%;
-  max-height: 600px;
-  margin: 100px;
+  height: 600px;
+  padding: 30px;
+  border: 3px solid red;
 `;
 
-const MarkIcon = styled.div`
+const Carousel = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-height: 600px;
-  margin: 100px;
+  height: 400px;
+  width: 500px;
+  border: 2px dashed goldenrod;
 `;
+
+const MarkIcon = styled.img`
+  max-width: 42px;
+  max-height: 42px;
+  border: 3px solid green;
+`;
+
 const Text = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-height: 600px;
-  margin: 100px;
+  width: 200px;
+  height: 50px;
+  color: #fff;
 `;
 const Photo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-height: 600px;
-  margin: 100px;
+  margin: 10px;
 `;
 const Name = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-height: 600px;
-  margin: 100px;
+  margin: 10px;
 `;
 
 const Speciality = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   max-height: 600px;
-  margin: 100px;
+  margin: 10px;
 `;
