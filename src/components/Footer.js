@@ -6,19 +6,34 @@ const Footer = () => {
     <Container>
       <SubscribeContainer>
         <SubmitIcon src={`./images/icons/011.png`} />
-        <Header1>Subscribe to Newsletter</Header1>
+        <SubHeader>Subscribe to Newsletter</SubHeader>
         <TextField type="text" placeholder="Your email" />
         <Button>Submit</Button>
       </SubscribeContainer>
       <Content>
-        <SocialMedia></SocialMedia>
-        <Address></Address>
-        <Courses></Courses>
-        <RecentPosts></RecentPosts>
+        <SocialMedia>
+          Please contact me for more information about my work and opportunites.
+          <Icons>
+            <SocialMediaIcon name={"facebook"} />
+            <SocialMediaIcon name={"twitter"} />
+            <SocialMediaIcon name={"pinterest"} />
+            <SocialMediaIcon name={"google"} />
+            <SocialMediaIcon name={"instagram"} />
+          </Icons>
+        </SocialMedia>
+        <Address>
+          <Header>Address</Header>
+        </Address>
+        <Courses>
+          <Header>Courses</Header>
+        </Courses>
+        <RecentPosts>
+          <Header>Recent Posts</Header>
+        </RecentPosts>
       </Content>
-      <Bottom>
+      {/* <Bottom>
         <GreyLine />
-      </Bottom>
+      </Bottom> */}
     </Container>
   );
 };
@@ -50,7 +65,7 @@ const SubmitIcon = styled.img`
   margin-right: 20px;
 `;
 
-const Header1 = styled.div`
+const SubHeader = styled.div`
   font-size: 28px;
   font-weight: 700;
   margin-right: 20px;
@@ -83,36 +98,55 @@ const Button = styled.div`
 `;
 
 const Content = styled.div`
+  display: flex;
+  width: 900px;
   font-size: 12px;
-  width: 100px;
-  height: 100px;
-  border: 2px dashed goldenrod;
+  color: #fff;
+  /* border: 5px dashed cyan; */
 `;
 
 const SocialMedia = styled.div`
+  flex: 1;
   font-size: 12px;
-  width: 100px;
-  height: 100px;
-  border: 2px dashed goldenrod;
+  width: 400px;
+  height: 200px;
+  border: 2px dashed red;
+`;
+
+const SocialMediaIcon = styled(Icons)`
+  font-size: 15px;
+  margin-bottom: -5px;
+  color: #fff;
+  margin-right: 8px;
 `;
 
 const Address = styled.div`
+  flex: 1;
+  width: 400px;
   font-size: 12px;
-  width: 100px;
   height: 100px;
-  border: 2px dashed goldenrod;
+  border: 2px dashed green;
+`;
+
+const Header = styled.div`
+  font-size: 18px;
+  color: #ff5421;
+  text-transform: uppercase;
 `;
 
 const Courses = styled.div`
+  flex: 1;
   font-size: 12px;
-  width: 100px;
+  width: 400px;
   height: 100px;
-  border: 2px dashed goldenrod;
+  border: 2px dashed blue;
 `;
 
 const RecentPosts = styled.div`
+  flex: 1;
+
   font-size: 12px;
-  width: 100px;
+  width: 400px;
   height: 100px;
   border: 2px dashed goldenrod;
 `;

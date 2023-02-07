@@ -1,7 +1,15 @@
 import { HiSearch, HiUsers } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
 import { BiShoppingBag } from "react-icons/bi";
-import { FaStar, FaBook } from "react-icons/fa";
+import {
+  FaStar,
+  FaBook,
+  FaFacebookF,
+  FaTwitter,
+  FaPinterest,
+  FaGooglePlusG,
+  FaInstagram
+} from "react-icons/fa";
 import { GiOpenBook } from "react-icons/gi";
 import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { BsFillPlayCircleFill, BsCalendarCheck } from "react-icons/bs";
@@ -33,6 +41,16 @@ const Icons = ({ name, className }) => {
       return <FaBook className={className} />;
     case "subsribe":
       return <RiMailSendLine className={className} />;
+    case "facebook":
+      return <FaFacebookF className={className} />;
+    case "twitter":
+      return <FaTwitter className={className} />;
+    case "pinterest":
+      return <FaPinterest className={className} />;
+    case "google":
+      return <FaGooglePlusG className={className} />;
+    case "instagram":
+      return <FaInstagram className={className} />;
     default:
       return null;
   }
