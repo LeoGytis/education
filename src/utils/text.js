@@ -103,3 +103,21 @@ export const questionsInfo = [
       "Distance education refers to a mode of learning where students receive instruction and engage in coursework remotely, typically through online methods such as websites, email, and video conferencing."
   }
 ];
+
+export const testimonialText = [
+  {
+    name: "David Warner",
+    speciality: "Web Developer",
+    text: "Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That’s how I would describe Jeramy and his team at The Lorem Ipsum Company. When it comes to content marketing, you’ll definitely get the 5-star treatment from the Lorem Ipsum Company."
+  },
+  {
+    name: "Mitchel Starc",
+    speciality: "App Designer",
+    text: "Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That’s how I would describe Jeramy and his team at The Lorem Ipsum Company. When it comes to content marketing, you’ll definitely get the 5-star treatment from the Lorem Ipsum Company."
+  },
+  {
+    name: "Steve Smith",
+    speciality: "Web Designer",
+    text: "Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That’s how I would describe Jeramy and his team at The Lorem Ipsum Company. When it comes to content marketing, you’ll definitely get the 5-star treatment from the Lorem Ipsum Company."
+  }
+];
