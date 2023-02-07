@@ -5,7 +5,7 @@ import { FaStar, FaBook } from "react-icons/fa";
 import { GiOpenBook } from "react-icons/gi";
 import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { BsFillPlayCircleFill, BsCalendarCheck } from "react-icons/bs";
-import { RiUser3Line } from "react-icons/ri";
+import { RiUser3Line, RiMailSendLine } from "react-icons/ri";
 
 const Icons = ({ name, className }) => {
   switch (name) {
@@ -31,6 +31,8 @@ const Icons = ({ name, className }) => {
       return <RiUser3Line className={className} />;
     case "book":
       return <FaBook className={className} />;
+    case "subsribe":
+      return <RiMailSendLine className={className} />;
     default:
       return null;
   }
