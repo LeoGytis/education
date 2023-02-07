@@ -56,6 +56,7 @@ const Content = styled.div`
   max-width: 1200px;
   width: 100%;
   height: 600px;
+  color: #fff;
 `;
 
 const Carousel = styled.div`
@@ -64,7 +65,8 @@ const Carousel = styled.div`
   align-items: center;
   height: 400px;
   width: 600px;
-  border: 2px dashed goldenrod;
+  background-color: rgba(23, 31, 50, 0.5882352941176471);
+  padding: 40px 20px;
 `;
 
 const MarkIcon = styled.img`
@@ -80,31 +82,25 @@ const Text = styled.div`
   width: 80%;
   font-size: 22px;
   font-weight: 600;
-  color: #fff;
-  border: 3px dotted green;
+  margin-bottom: 10px;
 `;
 
 const Photo = styled.div`
-  margin: 10px;
-  width: 42px;
-  height: 42px;
-  background-image: url("./images/photos/030.jpg");
+  width: 110px;
+  height: 100%;
+  background-image: url("./images/photos/user01.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
   background-size: cover;
-  border: 3px solid red;
 `;
 
 const Name = styled.div`
-  width: 100px;
-  margin: 10px;
-  border: 2px;
-  border: 3px solid red;
+  font-size: 18px;
+  font-weight: 700;
 `;
 
 const Speciality = styled.div`
-  margin: 10px;
-  width: 100px;
-  border: 3px solid red;
+  font-size: 12px;
+  font-weight: 500;
 `;
