@@ -124,3 +124,38 @@ export const testimonialText = [
       "Web development requires a strong understanding of HTML, CSS, and JavaScript. Keeping up with the latest design trends and web technologies is crucial to stay ahead in the industry. Collaborating with designers, project managers, and clients to bring their vision to life is an important part of the web development process."
   }
 ];
+
+export const newsInfo = [
+  {
+    header: "Majority of students dissatisfied for world coronavirus support",
+    comment:
+      "We denounce with righteous indige nation and dislike men who are so beguiled...",
+    place: "University",
+    date: "2020-12-20",
+    user: "admin"
+  },
+  {
+    header: "University class starting soon while the lovely valley team",
+    comment:
+      "We denounce with righteous indige nation and dislike men who are so beguiled...",
+    place: "School",
+    date: "2021-01-15",
+    user: "adam"
+  },
+  {
+    header: "How universities can nurture for the world climate crisis",
+    comment:
+      "We denounce with righteous indige nation and dislike men who are so beguiled...",
+    place: "Primary",
+    date: "2021-02-18",
+    user: "admin"
+  },
+  {
+    header: "Oxford vaccine trial resumes in UK after being halted",
+    comment:
+      "We denounce with righteous indige nation and dislike men who are so beguiled...",
+    place: "College",
+    date: "2021-02-27",
+    user: "admin"
+  }
+];

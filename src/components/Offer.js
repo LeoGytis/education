@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { offerInfo } from "../utils/text";
+import { offerInfo } from "../utils/texts";
 
 const Offer = () => {
   return (

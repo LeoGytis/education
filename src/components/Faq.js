@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Icons from "../utils/Icons";
-import { offerInfo, questionsInfo } from "../utils/text";
+import { offerInfo, questionsInfo } from "../utils/texts";
 
 const Faq = () => {
   return (

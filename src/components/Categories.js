@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { iconPop, waveBeat } from "../utils/Animations";
-import { categoriesInfo } from "../utils/text";
+import { categoriesInfo } from "../utils/texts";
 
 const Categories = () => {
   return (

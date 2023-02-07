@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Icons from "../utils/Icons";
-import { coursesInfo } from "../utils/text";
+import { coursesInfo } from "../utils/texts";
 
 const Courses = () => {
   return (

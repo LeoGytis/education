@@ -1,4 +1,4 @@
-import { HeaderTabsInfo } from "../utils/text";
+import { HeaderTabsInfo } from "../utils/texts";
 import React from "react";
 import styled from "styled-components";
 import { waveBeat } from "../utils/Animations";

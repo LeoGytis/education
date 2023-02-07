@@ -1,10 +1,11 @@
 import { HiSearch, HiUsers } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
 import { BiShoppingBag } from "react-icons/bi";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaBook } from "react-icons/fa";
 import { GiOpenBook } from "react-icons/gi";
 import { MdOutlineQuestionAnswer } from "react-icons/md";
-import { BsFillPlayCircleFill } from "react-icons/bs";
+import { BsFillPlayCircleFill, BsCalendarCheck } from "react-icons/bs";
+import { RiUser3Line } from "react-icons/ri";
 
 const Icons = ({ name, className }) => {
   switch (name) {
@@ -24,6 +25,12 @@ const Icons = ({ name, className }) => {
       return <MdOutlineQuestionAnswer className={className} />;
     case "play":
       return <BsFillPlayCircleFill className={className} />;
+    case "date":
+      return <BsCalendarCheck className={className} />;
+    case "user":
+      return <RiUser3Line className={className} />;
+    case "book":
+      return <FaBook className={className} />;
     default:
       return null;
   }

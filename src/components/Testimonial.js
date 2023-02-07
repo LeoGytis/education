@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { testimonialText } from "../utils/text";
+import { testimonialText } from "../utils/texts";
 
 const Testimonial = () => {
   return (
