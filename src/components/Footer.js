@@ -7,10 +7,8 @@ const Footer = () => {
       <SubscribeContainer>
         <SubmitIcon src={`./images/icons/011.png`} />
         <Header1>Subscribe to Newsletter</Header1>
-        <SubmitArea>
-          <TextField type="text" placeholder="Email" />
-          <Button>Submit</Button>
-        </SubmitArea>
+        <TextField type="text" placeholder="Your email" />
+        <Button>Submit</Button>
       </SubscribeContainer>
       <Content>
         <SocialMedia></SocialMedia>
@@ -38,19 +36,17 @@ const Container = styled.div`
 
 const SubscribeContainer = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 900px;
-  max-height: 10px;
   background-color: #171f32;
   color: #fff;
   border-radius: 3px;
-  padding: 60px 60px;
+  padding: 40px 20px;
 `;
 
 const SubmitIcon = styled.img`
-  max-width: 42px;
-  max-height: 42px;
+  width: 42px;
+  height: 42px;
   margin-right: 20px;
 `;
 
@@ -60,19 +56,10 @@ const Header1 = styled.div`
   margin-right: 20px;
 `;
 
-const SubmitArea = styled.div`
-  display: flex;
-  max-width: 500px;
-  /* font-size: 30px;
-  font-weight: 700;
-  margin-right: 40px;
-  margin-bottom: 10px; */
-`;
-
 const TextField = styled.input`
   font-size: 14px;
   color: #505050;
-  padding: 18px 150px 18px 30px;
+  padding: 14px 100px 14px 30px;
   outline: none;
   border: none;
   border-radius: 2px 0 0 2px;
@@ -82,10 +69,9 @@ const TextField = styled.input`
 `;
 
 const Button = styled.div`
-  width: 20%;
   font-size: 14px;
   font-weight: 500;
-  padding: 17px 40px;
+  padding: 13px 32px;
   border-radius: 0 2px 2px 0;
   border: none;
   cursor: pointer;
