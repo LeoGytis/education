@@ -19,8 +19,8 @@ function App() {
       <Courses />
       <Offer />
       <Faq />
-      <Testimonial /> 
-      <NewsUpdate />*/}
+      <Testimonial /> */}
+      <NewsUpdate />
       <NewsLetter />
       <Footer />
     </>

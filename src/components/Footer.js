@@ -7,10 +7,10 @@ const Footer = () => {
       <Row>
         <Column>
           <Logo src={`./images/logo/educavo_logo.png`} alt="" />
-          <Text>
+          <MediaText>
             Please contact me for more information about my work and
-            opportunites. Come back again. Have a nice day!
-          </Text>
+            opportunites. Your can reach me on social media!
+          </MediaText>
           <MediaIcons>
             <SocialMediaIcon name={"facebook"} />
             <SocialMediaIcon name={"twitter"} />
@@ -21,14 +21,20 @@ const Footer = () => {
         </Column>
         <Column>
           <Header>Address</Header>
-          <AddressContent>
-            <AddressIcon name={"address"} />
-            <AddressText> Maironio g. 24, 01125 Vilnius</AddressText>
-            <AddressIcon name={"phone"} />
-            <AddressText> +370 682 12888</AddressText>
-            <AddressIcon name={"mail"} />
-            <AddressText> leogytis@gmail.com</AddressText>
-          </AddressContent>
+          <AddressRow>
+            <AddressLine>
+              <AddressIcon name={"location"} />
+              Maironio g. 24, Vilnius
+            </AddressLine>
+            <AddressLine background-color={"red"}>
+              <AddressIcon name={"phone"} />
+              +370 682 12888
+            </AddressLine>
+            <AddressLine>
+              <AddressIcon name={"mail"} />
+              leogytis@gmail.com
+            </AddressLine>
+          </AddressRow>
         </Column>
         <Column>
           <Header>Courses</Header>
@@ -87,7 +93,7 @@ const Container = styled.div`
 `;
 
 const Row = styled.div`
-  max-width: 950px;
+  max-width: 1270px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -104,16 +110,14 @@ const Column = styled.div`
 `;
 
 const Logo = styled.img`
-  display: flex;
   width: 200px;
-  padding: 30px 0 30px 0;
-  height: auto;
+  margin-bottom: 30px;
   &:hover {
     cursor: pointer;
   }
 `;
 
-const Text = styled.div`
+const MediaText = styled.div`
   font-size: 15px;
   font-weight: 400;
   padding-right: 60px;
@@ -125,7 +129,7 @@ const MediaIcons = styled.div`
 
 const SocialMediaIcon = styled(Icons)`
   font-size: 18px;
-  margin-right: 18px;
+  margin-right: 12px;
   &:hover {
     cursor: pointer;
     color: #ff5421;
@@ -143,20 +147,26 @@ const Header = styled.div`
   border-bottom: 3px solid #ff5421;
 `;
 
-const AddressContent = styled.div`
-  font-size: 12px;
+const AddressRow = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const AddressLine = styled.div`
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 14px;
 `;
 
 const AddressIcon = styled(Icons)`
-  font-size: 20px;
-  margin-bottom: -5px;
+  font-size: 22px;
+  margin: 0 8px -5px 0;
   color: #ff5421;
-  margin-right: 8px;
-`;
-
-const AddressText = styled.div`
-  font-size: 16px;
-  font-weight: 700;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  transition: all 0.3s ease;
 `;
 
 const SquareIcon = styled(Icons)`
@@ -175,6 +185,7 @@ const Course = styled.div`
   }
   transition: all 0.5s ease;
 `;
+
 const Post = styled.div`
   display: flex;
   font-size: 12px;

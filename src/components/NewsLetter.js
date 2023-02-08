@@ -27,6 +27,7 @@ const Row = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   border-radius: 3px;
   padding: 60px 70px;
   margin-bottom: -85px;

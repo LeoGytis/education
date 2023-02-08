@@ -60,7 +60,7 @@ const Icons = ({ name, className }) => {
       return <FaGooglePlusG className={className} />;
     case "instagram":
       return <FaInstagram className={className} />;
-    case "address":
+    case "location":
       return <BiMapPin className={className} />;
     case "phone":
       return <BiPhoneCall className={className} />;
