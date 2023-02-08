@@ -57,11 +57,23 @@ const Footer = () => {
           <Header>Recent Posts</Header>
           <Post>
             <Photo src={`./images/photos/061.jpg`} alt="" />
-            <PostHeader>High School Program Starting Soon 2024</PostHeader>
-            <PostDate>
-              <CalendarIcon name={"date"} />
-              October 15, 2020
-            </PostDate>
+            <PostContent>
+              <PostHeader>High School Program Starting Soon 2024</PostHeader>
+              <PostDate>
+                <CalendarIcon name={"date"} />
+                October 15, 2020
+              </PostDate>
+            </PostContent>
+          </Post>
+          <Post>
+            <Photo src={`./images/photos/062.jpg`} alt="" />
+            <PostContent>
+              <PostHeader>Shutdown Of Schools Extended To Aug 31</PostHeader>
+              <PostDate>
+                <CalendarIcon name={"date"} />
+                March 25, 2023
+              </PostDate>
+            </PostContent>
           </Post>
         </RecentPosts>
       </Content>
@@ -237,17 +249,23 @@ const RecentPosts = styled.div`
 const Post = styled.div`
   display: flex;
   font-size: 12px;
+  padding-bottom: 15px;
 `;
 
 const Photo = styled.img`
   max-width: 80px;
-  max-height: 80px;
+  max-height: 100px;
   margin-right: 10px;
+  border-radius: 4px;
+`;
+
+const PostContent = styled.div`
+  width: 150px;
 `;
 
 const PostHeader = styled.div`
-  width: 80px;
-  font-size: 12px;
+  font-size: 14px;
+  padding-bottom: 10px;
   &:hover {
     cursor: pointer;
     color: #ff5421;
@@ -257,7 +275,7 @@ const PostHeader = styled.div`
 
 const CalendarIcon = styled(Icons)`
   font-size: 15px;
-  margin: 0 8px 2px 0;
+  margin: 0 8px -2px 0;
   color: #ff5421;
 `;
 
