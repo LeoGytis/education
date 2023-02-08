@@ -55,6 +55,14 @@ const Footer = () => {
         </Courses>
         <RecentPosts>
           <Header>Recent Posts</Header>
+          <Post>
+            <Photo src={`./images/photos/061.jpg`} alt="" />
+            <PostHeader>High School Program Starting Soon 2024</PostHeader>
+            <PostDate>
+              <CalendarIcon name={"date"} />
+              October 15, 2020
+            </PostDate>
+          </Post>
         </RecentPosts>
       </Content>
       {/* <Bottom>
@@ -198,7 +206,6 @@ const Courses = styled.div`
   font-size: 12px;
   width: 400px;
   height: 100px;
-
   /* border: 2px dashed blue; */
 `;
 
@@ -221,11 +228,41 @@ const Course = styled.div`
 
 const RecentPosts = styled.div`
   flex: 1;
-
   font-size: 12px;
   width: 400px;
   height: 100px;
-  border: 2px dashed goldenrod;
+  /* border: 2px dashed goldenrod; */
+`;
+
+const Post = styled.div`
+  display: flex;
+  font-size: 12px;
+`;
+
+const Photo = styled.img`
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 10px;
+`;
+
+const PostHeader = styled.div`
+  width: 80px;
+  font-size: 12px;
+  &:hover {
+    cursor: pointer;
+    color: #ff5421;
+  }
+  transition: all 0.5s ease;
+`;
+
+const CalendarIcon = styled(Icons)`
+  font-size: 15px;
+  margin: 0 8px 2px 0;
+  color: #ff5421;
+`;
+
+const PostDate = styled.div`
+  font-size: 12px;
 `;
 
 const Bottom = styled.div`
