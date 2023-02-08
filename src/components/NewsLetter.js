@@ -5,7 +5,7 @@ const NewsLetter = () => {
     <Container>
       <Row>
         <Icon src={`./images/icons/011.png`} />
-        <SubHeader>Subscribe to Newsletter</SubHeader>
+        <Header>Subscribe to Newsletter</Header>
         <TextField type="text" placeholder="Your email" />
         <Button>Submit</Button>
       </Row>
@@ -17,31 +17,30 @@ export default NewsLetter;
 
 const Container = styled.div`
   max-width: 1270px;
-  width: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
-  background-color: yellowgreen;
+  align-items: center;
 `;
 
 const Row = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
-  width: 85%;
-  background-color: #171f32;
   border-radius: 3px;
-  padding: 40px 20px;
+  padding: 60px 70px;
+  margin-bottom: -85px;
+  background-color: #171f32;
   color: #fff;
 `;
 
 const Icon = styled.img`
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   margin-right: 20px;
 `;
 
-const SubHeader = styled.div`
+const Header = styled.div`
   font-size: 28px;
   font-weight: 700;
   margin-right: 20px;
@@ -50,7 +49,7 @@ const SubHeader = styled.div`
 const TextField = styled.input`
   font-size: 14px;
   color: #505050;
-  padding: 14px 100px 14px 30px;
+  padding: 15px 100px 14px 30px;
   outline: none;
   border: none;
   border-radius: 2px 0 0 2px;
