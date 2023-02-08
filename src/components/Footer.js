@@ -40,6 +40,10 @@ const Footer = () => {
           <Header>Courses</Header>
           <Course>
             <SquareIcon name={"square"} />
+            Courses
+          </Course>
+          <Course>
+            <SquareIcon name={"square"} />
             Course Two
           </Course>
           <Course>
@@ -78,9 +82,18 @@ const Footer = () => {
             </PostContent>
           </Post>
         </Column>
-        {/* <BottomContainer>
-          <GreyLine />
-        </BottomContainer> */}
+        <BottomContainer>
+          <Credentials>
+            © 2023 All Rights Reserved. Designed By Gytis Leonavicius
+          </Credentials>
+          <CreditsIcons>
+            Event
+            <DotIcon name={"dot"} />
+            Blog
+            <DotIcon name={"dot"} />
+            Contact
+          </CreditsIcons>
+        </BottomContainer>
       </Row>
     </Container>
   );
@@ -99,14 +112,13 @@ const Row = styled.div`
   flex-wrap: wrap;
   background-color: #151515;
   color: #fff;
-  padding: 200px 0px 90px 0px;
+  padding: 200px 0px 100px 0px;
   font-size: 12px;
 `;
 
 const Column = styled.div`
   flex: 0 0 auto;
   width: 25%;
-  /* border: 1px solid red; */
 `;
 
 const Logo = styled.img`
@@ -153,14 +165,15 @@ const AddressRow = styled.div`
 `;
 
 const AddressLine = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 22px;
 `;
 
 const AddressIcon = styled(Icons)`
-  font-size: 22px;
-  margin: 0 8px -5px 0;
+  font-size: 26px;
+  margin-right: 8px;
+  margin-bottom: -6px;
   color: #ff5421;
   &:hover {
     cursor: pointer;
@@ -169,15 +182,9 @@ const AddressIcon = styled(Icons)`
   transition: all 0.3s ease;
 `;
 
-const SquareIcon = styled(Icons)`
-  font-size: 5px;
-  margin: 0 8px 2px 0;
-  color: #ff5421;
-`;
-
 const Course = styled.div`
   font-size: 16px;
-  padding-bottom: 3px;
+  padding-bottom: 16px;
   color: #fff;
   &:hover {
     cursor: pointer;
@@ -186,16 +193,22 @@ const Course = styled.div`
   transition: all 0.5s ease;
 `;
 
+const SquareIcon = styled(Icons)`
+  font-size: 5px;
+  margin: 0 8px 2px 0;
+  color: #ff5421;
+`;
+
 const Post = styled.div`
   display: flex;
   font-size: 12px;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
 `;
 
 const Photo = styled.img`
   max-width: 80px;
   max-height: 100px;
-  margin-right: 10px;
+  margin-right: 18px;
   border-radius: 4px;
 `;
 
@@ -224,13 +237,21 @@ const PostDate = styled.div`
 `;
 
 const BottomContainer = styled.div`
-  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 100px;
-  border: 2px dashed cyan;
+  margin-top: 100px;
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
 `;
 
-const GreyLine = styled.div`
-  margin: 30px 10px 0px 10px;
-  border-top: 1px solid #505050; ;
+const Credentials = styled.div``;
+const CreditsIcons = styled.div``;
+
+const DotIcon = styled(Icons)`
+  font-size: 15px;
+  margin: 0 12px -2px 12px;
+  color: #ff5421;
 `;

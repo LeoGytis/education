@@ -23,6 +23,7 @@ import {
   BsFillSquareFill
 } from "react-icons/bs";
 import { RiUser3Line, RiMailSendLine } from "react-icons/ri";
+import { GoPrimitiveDot } from "react-icons/go";
 
 const Icons = ({ name, className }) => {
   switch (name) {
@@ -68,6 +69,8 @@ const Icons = ({ name, className }) => {
       return <BiMailSend className={className} />;
     case "square":
       return <BsFillSquareFill className={className} />;
+    case "dot":
+      return <GoPrimitiveDot className={className} />;
     default:
       return null;
   }
