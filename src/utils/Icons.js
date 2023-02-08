@@ -1,6 +1,11 @@
 import { HiSearch, HiUsers } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
-import { BiShoppingBag } from "react-icons/bi";
+import {
+  BiShoppingBag,
+  BiMapPin,
+  BiPhoneCall,
+  BiMailSend
+} from "react-icons/bi";
 import {
   FaStar,
   FaBook,
@@ -12,7 +17,11 @@ import {
 } from "react-icons/fa";
 import { GiOpenBook } from "react-icons/gi";
 import { MdOutlineQuestionAnswer } from "react-icons/md";
-import { BsFillPlayCircleFill, BsCalendarCheck } from "react-icons/bs";
+import {
+  BsFillPlayCircleFill,
+  BsCalendarCheck,
+  BsFillSquareFill
+} from "react-icons/bs";
 import { RiUser3Line, RiMailSendLine } from "react-icons/ri";
 
 const Icons = ({ name, className }) => {
@@ -51,6 +60,14 @@ const Icons = ({ name, className }) => {
       return <FaGooglePlusG className={className} />;
     case "instagram":
       return <FaInstagram className={className} />;
+    case "address":
+      return <BiMapPin className={className} />;
+    case "phone":
+      return <BiPhoneCall className={className} />;
+    case "mail":
+      return <BiMailSend className={className} />;
+    case "square":
+      return <BsFillSquareFill className={className} />;
     default:
       return null;
   }
