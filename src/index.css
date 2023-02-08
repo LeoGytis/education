@@ -61,13 +61,10 @@
 
 body {
   box-sizing: border-box;
-  margin: 0;
   font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
