@@ -4,82 +4,84 @@ import Icons from "../utils/Icons";
 const Footer = () => {
   return (
     <Container>
-      <SubscribeContainer>
-        <SubmitIcon src={`./images/icons/011.png`} />
-        <SubHeader>Subscribe to Newsletter</SubHeader>
-        <TextField type="text" placeholder="Your email" />
-        <Button>Submit</Button>
-      </SubscribeContainer>
-      <Content>
-        <SocialMedia>
-          <Logo src={`./images/logo/educavo_logo.png`} alt="" />
-          Please contact me for more information about my work and opportunites.
-          Have a nice day and goodbye!
-          <MediaIcons>
-            <SocialMediaIcon name={"facebook"} />
-            <SocialMediaIcon name={"twitter"} />
-            <SocialMediaIcon name={"pinterest"} />
-            <SocialMediaIcon name={"google"} />
-            <SocialMediaIcon name={"instagram"} />
-          </MediaIcons>
-        </SocialMedia>
-        <Address>
-          <Header>Address</Header>
-          <AddressContent>
-            <AddressIcon name={"address"} />
-            <AddressText> Maironio g. 24, 01125 Vilnius</AddressText>
-            <AddressIcon name={"phone"} />
-            <AddressText> +370 682 12888</AddressText>
-            <AddressIcon name={"mail"} />
-            <AddressText> leogytis@gmail.com</AddressText>
-          </AddressContent>
-        </Address>
-        <Courses>
-          <Header>Courses</Header>
-          <Course>
-            <SquareIcon name={"square"} />
-            Course Two
-          </Course>
-          <Course>
-            <SquareIcon name={"square"} />
-            Single Course
-          </Course>
-          <Course href="#">
-            <SquareIcon name={"square"} />
-            Profile
-          </Course>
-          <Course>
-            <SquareIcon name={"square"} />
-            Login/Register
-          </Course>
-        </Courses>
-        <RecentPosts>
-          <Header>Recent Posts</Header>
-          <Post>
-            <Photo src={`./images/photos/061.jpg`} alt="" />
-            <PostContent>
-              <PostHeader>High School Program Starting Soon 2024</PostHeader>
-              <PostDate>
-                <CalendarIcon name={"date"} />
-                October 15, 2020
-              </PostDate>
-            </PostContent>
-          </Post>
-          <Post>
-            <Photo src={`./images/photos/062.jpg`} alt="" />
-            <PostContent>
-              <PostHeader>Shutdown Of Schools Extended To Aug 31</PostHeader>
-              <PostDate>
-                <CalendarIcon name={"date"} />
-                March 25, 2023
-              </PostDate>
-            </PostContent>
-          </Post>
-        </RecentPosts>
-      </Content>
-      {/* <Bottom>
-        <GreyLine />
-      </Bottom> */}
+      <MainContainer>
+        <NewsLetterContainer>
+          <SubmitIcon src={`./images/icons/011.png`} />
+          <SubHeader>Subscribe to Newsletter</SubHeader>
+          <TextField type="text" placeholder="Your email" />
+          <Button>Submit</Button>
+        </NewsLetterContainer>
+        <ContentContainer>
+          <SocialMedia>
+            <Logo src={`./images/logo/educavo_logo.png`} alt="" />
+            Please contact me for more information about my work and
+            opportunites. Have a nice day and goodbye!
+            <MediaIcons>
+              <SocialMediaIcon name={"facebook"} />
+              <SocialMediaIcon name={"twitter"} />
+              <SocialMediaIcon name={"pinterest"} />
+              <SocialMediaIcon name={"google"} />
+              <SocialMediaIcon name={"instagram"} />
+            </MediaIcons>
+          </SocialMedia>
+          <Address>
+            <Header>Address</Header>
+            <AddressContent>
+              <AddressIcon name={"address"} />
+              <AddressText> Maironio g. 24, 01125 Vilnius</AddressText>
+              <AddressIcon name={"phone"} />
+              <AddressText> +370 682 12888</AddressText>
+              <AddressIcon name={"mail"} />
+              <AddressText> leogytis@gmail.com</AddressText>
+            </AddressContent>
+          </Address>
+          <Courses>
+            <Header>Courses</Header>
+            <Course>
+              <SquareIcon name={"square"} />
+              Course Two
+            </Course>
+            <Course>
+              <SquareIcon name={"square"} />
+              Single Course
+            </Course>
+            <Course href="#">
+              <SquareIcon name={"square"} />
+              Profile
+            </Course>
+            <Course>
+              <SquareIcon name={"square"} />
+              Login/Register
+            </Course>
+          </Courses>
+          <RecentPosts>
+            <Header>Recent Posts</Header>
+            <Post>
+              <Photo src={`./images/photos/061.jpg`} alt="" />
+              <PostContent>
+                <PostHeader>High School Program Starting Soon 2024</PostHeader>
+                <PostDate>
+                  <CalendarIcon name={"date"} />
+                  October 15, 2020
+                </PostDate>
+              </PostContent>
+            </Post>
+            <Post>
+              <Photo src={`./images/photos/062.jpg`} alt="" />
+              <PostContent>
+                <PostHeader>Shutdown Of Schools Extended To Aug 31</PostHeader>
+                <PostDate>
+                  <CalendarIcon name={"date"} />
+                  March 25, 2023
+                </PostDate>
+              </PostContent>
+            </Post>
+          </RecentPosts>
+        </ContentContainer>
+        {/* <BottomContainer>
+          <GreyLine />
+        </BottomContainer> */}
+      </MainContainer>
     </Container>
   );
 };
@@ -87,22 +89,26 @@ const Footer = () => {
 export default Footer;
 
 const Container = styled.div`
+  background-color: #151515;
+`;
+
+const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
   background-color: #151515;
   color: #fff;
 `;
 
-const SubscribeContainer = styled.div`
+const NewsLetterContainer = styled.div`
   display: flex;
   align-items: center;
   width: 900px;
   background-color: #171f32;
   border-radius: 3px;
   padding: 40px 20px;
+  margin-top: -80px;
+  margin-bottom: 50px;
 `;
 
 const SubmitIcon = styled.img`
@@ -142,7 +148,7 @@ const Button = styled.div`
   }
 `;
 
-const Content = styled.div`
+const ContentContainer = styled.div`
   display: flex;
   width: 900px;
   font-size: 12px;
@@ -283,14 +289,14 @@ const PostDate = styled.div`
   font-size: 12px;
 `;
 
-const Bottom = styled.div`
+const BottomContainer = styled.div`
   font-size: 12px;
-  width: 100px;
+  width: 100%;
   height: 100px;
-  border: 2px dashed goldenrod;
+  border: 2px dashed cyan;
 `;
 
 const GreyLine = styled.div`
   margin: 30px 10px 0px 10px;
-  border-top: 1px solid #f4f0f0;
+  border-top: 1px solid #505050; ;
 `;
