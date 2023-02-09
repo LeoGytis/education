@@ -7,7 +7,7 @@ const NewsUpdate = () => {
     <Container>
       <Header1>News Update</Header1>
       <Header2>Latest News & events</Header2>
-      <NewsContainer>
+      <Row>
         {newsInfo.map((news, i) => {
           return (
             <News>
@@ -41,7 +41,7 @@ const NewsUpdate = () => {
             </News>
           );
         })}
-      </NewsContainer>
+      </Row>
     </Container>
   );
 };
@@ -55,6 +55,7 @@ const Container = styled.div`
   align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
+  /* background-color: goldenrod; */
 `;
 
 const Header1 = styled.div`
@@ -74,14 +75,13 @@ const Header2 = styled.div`
   margin-bottom: 26px;
 `;
 
-const NewsContainer = styled.div`
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 100% 100%;
-  max-width: 1000px;
-  max-height: 400px;
-  gap: 20px;
-  margin-bottom: 34px;
+const Row = styled.div`
+  max-width: 1270px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  box-shadow: inset 0 -150px 200px -50px rgba(211, 211, 211, 0.4);
 `;
 
 const News = styled.div`
@@ -97,7 +97,7 @@ const News = styled.div`
 `;
 
 const Image = styled.div`
-  height: 170px;
+  height: 250px;
   background-image: url(${({ image }) => image || "none"});
   background-position: center;
   background-repeat: no-repeat;

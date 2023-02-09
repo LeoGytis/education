@@ -53,7 +53,6 @@ const Icon = styled.img`
   &:hover {
     cursor: pointer;
     opacity: 0.9;
-    transform: scale(1.2);
   }
   animation-name: ${waveBeat};
   animation-duration: 3s;

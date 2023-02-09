@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Categories from "./components/Categories";
 import Courses from "./components/Courses";
 import Faq from "./components/Faq";
@@ -13,13 +12,13 @@ import Testimonial from "./components/Testimonial";
 function App() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Header />
       <Categories />
       <Courses />
       <Offer />
       <Faq />
-      <Testimonial /> */}
+      <Testimonial />
       <NewsUpdate />
       <NewsLetter />
       <Footer />
