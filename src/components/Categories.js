@@ -4,7 +4,7 @@ import { categoriesInfo } from "../utils/texts";
 
 const Categories = () => {
   return (
-    <Container>
+    <Container id="categories">
       <Header1>Top categories</Header1>
       <Header2>Popular Online Categories</Header2>
       <CategoriesContainer>

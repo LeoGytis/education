@@ -4,7 +4,7 @@ import { offerInfo, questionsInfo } from "../utils/texts";
 
 const Faq = () => {
   return (
-    <Container>
+    <Container id="faq">
       <Content>
         <LeftSide>
           <Header>Frequently Asked Questions</Header>

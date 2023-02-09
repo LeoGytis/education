@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const NewsLetter = () => {
   return (
-    <Container>
+    <Container id="blog">
       <Row>
         <Icon src={`./images/icons/011.png`} />
         <Header>Subscribe to Newsletter</Header>

@@ -3,7 +3,7 @@ import { testimonialText } from "../utils/texts";
 
 const Testimonial = () => {
   return (
-    <Container>
+    <Container id="testimonials">
       <Header1>Testimonial</Header1>
       <Header2>What Students Saying</Header2>
       <Content>

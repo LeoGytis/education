@@ -3,7 +3,7 @@ import { offerInfo } from "../utils/texts";
 
 const Offer = () => {
   return (
-    <Container>
+    <Container id="offer">
       <LeftSide />
       <RightSide>
         <Content>

@@ -3,7 +3,7 @@ import Tabs from "./Tabs";
 
 const Header = () => {
   return (
-    <Container>
+    <Container id="home">
       <Header1 bg="#ff5421">Start learning today</Header1>
       <Header2>Online Courses From Leading Experts</Header2>
       <Button bg="#ff5421" color="#fff">

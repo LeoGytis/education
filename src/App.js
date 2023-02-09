@@ -8,16 +8,15 @@ import NewsLetter from "./components/NewsLetter";
 import NewsUpdate from "./components/NewsUpdate";
 import Offer from "./components/Offer";
 import Testimonial from "./components/Testimonial";
-import * as Scroll from "react-scroll";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Header id="home" />
-      <Categories id="about" />
-      <Courses id="courses" />
-      <Offer id="pages" />
+      <Header />
+      <Categories />
+      <Courses />
+      <Offer />
       <Faq />
       <Testimonial />
       <NewsUpdate />

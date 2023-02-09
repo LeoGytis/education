@@ -1,15 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as HamburgerSvg } from "../utils/Hamburger.svg";
 import Icons from "../utils/Icons";
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
@@ -18,24 +10,41 @@ const Navbar = () => {
         <Row>
           <Logo src={`./images/logo/educavo_logo_black.png`} alt="" />
           <Menu>
-            <Link activeClass="active" smooth spy to="home">
-              Home
-            </Link>
-            <Link activeClass="active" smooth spy to="about">
-              About
-            </Link>
-            <Link activeClass="active" smooth spy to="courses">
-              Courses
-            </Link>
-            <Link activeClass="active" smooth spy to="pages">
-              Pages
-            </Link>
-            <Link activeClass="active" smooth spy to="blog">
-              Blog
-            </Link>
-            <Link activeClass="active" smooth spy to="contact">
-              Contact
-            </Link>
+            <MenuItem>
+              <Link activeClass="active" smooth spy to="home">
+                Home
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link activeClass="active" smooth spy to="categories">
+                Categories
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link activeClass="active" smooth spy to="courses">
+                Courses
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link activeClass="active" smooth spy to="offer">
+                Offer
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link activeClass="active" smooth spy to="faq">
+                FAQ
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link activeClass="active" smooth spy to="testimonials">
+                Testimonials
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link activeClass="active" smooth spy to="blog">
+                Blog
+              </Link>
+            </MenuItem>
           </Menu>
           <Tools>
             <StyledIcon name={"search"}></StyledIcon>
@@ -60,8 +69,6 @@ const Container = styled.div`
   position: fixed;
   top: 0px;
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
 `;
 
 const Row = styled.div`
@@ -88,7 +95,7 @@ const Menu = styled.div`
   justify-content: space-evenly;
 `;
 
-const MenuItem = styled(Link)`
+const MenuItem = styled.div`
   position: relative;
   font-size: 20px;
   font-weight: 700;
@@ -96,6 +103,28 @@ const MenuItem = styled(Link)`
   &:hover {
     cursor: pointer;
   }
+
+  .active {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #ff5421;
+      transform-origin: bottom center;
+      transition: transform 0.5s ease-out;
+    }
+  }
+  .active {
+    &::after {
+      transform: scaleX(1);
+      transform-origin: bottom center;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -112,6 +141,23 @@ const MenuItem = styled(Link)`
     transform: scaleX(1);
     transform-origin: bottom center;
   }
+
+  /* &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff5421;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  } */
 `;
 
 const Tools = styled.div`

@@ -4,7 +4,7 @@ import { coursesInfo } from "../utils/texts";
 
 const Courses = () => {
   return (
-    <Container>
+    <Container id="courses">
       <Header1>Select Courses</Header1>
       <Header2>Explore Popular Courses</Header2>
       <CoursesContainer>
