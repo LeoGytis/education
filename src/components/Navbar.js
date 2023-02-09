@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import { ReactComponent as HamburgerSvg } from "../utils/Hamburger.svg";
 import Icons from "../utils/Icons";
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from "react-scroll";
 
 const Navbar = () => {
   return (
@@ -9,12 +18,24 @@ const Navbar = () => {
         <Row>
           <Logo src={`./images/logo/educavo_logo_black.png`} alt="" />
           <Menu>
-            <MenuItem>Home</MenuItem>
-            <MenuItem>About</MenuItem>
-            <MenuItem>Courses</MenuItem>
-            <MenuItem>Pages</MenuItem>
-            <MenuItem>Blog</MenuItem>
-            <MenuItem>Contact</MenuItem>
+            <Link activeClass="active" smooth spy to="home">
+              Home
+            </Link>
+            <Link activeClass="active" smooth spy to="about">
+              About
+            </Link>
+            <Link activeClass="active" smooth spy to="courses">
+              Courses
+            </Link>
+            <Link activeClass="active" smooth spy to="pages">
+              Pages
+            </Link>
+            <Link activeClass="active" smooth spy to="blog">
+              Blog
+            </Link>
+            <Link activeClass="active" smooth spy to="contact">
+              Contact
+            </Link>
           </Menu>
           <Tools>
             <StyledIcon name={"search"}></StyledIcon>
@@ -35,6 +56,12 @@ export default Navbar;
 const Container = styled.div`
   background-color: lightgrey;
   box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 0.9);
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
 `;
 
 const Row = styled.div`
@@ -61,7 +88,7 @@ const Menu = styled.div`
   justify-content: space-evenly;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
   position: relative;
   font-size: 20px;
   font-weight: 700;
@@ -115,10 +142,10 @@ const Hamburger = styled(HamburgerSvg)`
   padding: 10px;
   fill: #111;
   background-color: none;
-  height: ${({ heigth }) => heigth || "40px"};
+  height: ${({ heigth }) => heigth || "40px"}; //just testing
   &:hover {
     cursor: pointer;
-    fill: ${({ hoverColor }) => hoverColor || "#ff5421"};
+    fill: ${({ hoverColor }) => hoverColor || "#ff5421"}; //just testing
   }
   transition: all 0.5s ease;
 `;
