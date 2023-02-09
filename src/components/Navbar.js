@@ -6,23 +6,25 @@ const Navbar = () => {
   return (
     <>
       <Container>
-        <Logo src={`./images/educavo_logo.png`} alt="" />
-        <NavMenu>
-          <MenuItem>Home</MenuItem>
-          <MenuItem>About</MenuItem>
-          <MenuItem>Courses</MenuItem>
-          <MenuItem>Pages</MenuItem>
-          <MenuItem>Blog</MenuItem>
-          <MenuItem>Contact</MenuItem>
-        </NavMenu>
-        <NavTools>
-          <StyledIcon name={"search"}></StyledIcon>
-          <StyledIcon name={"shopbag"}></StyledIcon>
-          <StyledIcon name={"profile"}></StyledIcon>
-          <HamContainer>
-            <Hamburger />
-          </HamContainer>
-        </NavTools>
+        <Row>
+          <Logo src={`./images/logo/educavo_logo_black.png`} alt="" />
+          <Menu>
+            <MenuItem>Home</MenuItem>
+            <MenuItem>About</MenuItem>
+            <MenuItem>Courses</MenuItem>
+            <MenuItem>Pages</MenuItem>
+            <MenuItem>Blog</MenuItem>
+            <MenuItem>Contact</MenuItem>
+          </Menu>
+          <Tools>
+            <StyledIcon name={"search"}></StyledIcon>
+            <StyledIcon name={"shopbag"}></StyledIcon>
+            <StyledIcon name={"profile"}></StyledIcon>
+            <HamContainer>
+              <Hamburger />
+            </HamContainer>
+          </Tools>
+        </Row>
       </Container>
     </>
   );
@@ -31,35 +33,38 @@ const Navbar = () => {
 export default Navbar;
 
 const Container = styled.div`
+  background-color: lightgrey;
+  box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 0.9);
+`;
+
+const Row = styled.div`
+  max-width: 1270px;
+  margin: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  background-color: #fff;
+  color: #111;
   background-color: yellowgreen;
 `;
 
 const Logo = styled.img`
-  display: flex;
   width: 200px;
   padding: 30px 0 30px 0;
-  height: auto;
   &:hover {
     cursor: pointer;
   }
 `;
 
-const NavMenu = styled.div`
+const Menu = styled.div`
   display: flex;
   justify-content: space-evenly;
 `;
 
 const MenuItem = styled.div`
-  display: inline-block;
   position: relative;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding-bottom: 2px;
+  font-size: 20px;
+  font-weight: 700;
   margin: 15px;
   &:hover {
     cursor: pointer;
@@ -82,17 +87,15 @@ const MenuItem = styled.div`
   }
 `;
 
-const NavTools = styled.div`
+const Tools = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 `;
 
 const StyledIcon = styled(Icons)`
-  font-size: 1.6rem;
+  font-size: 26px;
   padding: 5px;
-  color: #fff;
-  vertical-align: middle;
   &:hover {
     cursor: pointer;
     color: #ff5421;
@@ -110,7 +113,7 @@ const HamContainer = styled.div`
 const Hamburger = styled(HamburgerSvg)`
   max-height: 20px;
   padding: 10px;
-  fill: white;
+  fill: #111;
   background-color: none;
   height: ${({ heigth }) => heigth || "40px"};
   &:hover {
