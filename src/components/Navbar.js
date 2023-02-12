@@ -10,40 +10,27 @@ const Navbar = () => {
         <Row>
           <Logo src={`./images/logo/educavo_logo_black.png`} alt="" />
           <Menu>
-            <MenuItem>
-              <Link activeClass="active" smooth spy to="home">
-                Home
-              </Link>
+            <MenuItem smooth spy to="home">
+              {/* activeClass={active} is not necessary */}
+              Home
             </MenuItem>
-            <MenuItem>
-              <Link activeClass="active" smooth spy to="categories">
-                Categories
-              </Link>
+            <MenuItem smooth spy to="categories">
+              Categories
             </MenuItem>
-            <MenuItem>
-              <Link activeClass="active" smooth spy to="courses">
-                Courses
-              </Link>
+            <MenuItem smooth spy to="courses">
+              Courses
             </MenuItem>
-            <MenuItem>
-              <Link activeClass="active" smooth spy to="offer">
-                Offer
-              </Link>
+            <MenuItem smooth spy to="offer">
+              Offer
             </MenuItem>
-            <MenuItem>
-              <Link activeClass="active" smooth spy to="faq">
-                FAQ
-              </Link>
+            <MenuItem smooth spy to="faq">
+              FAQ
             </MenuItem>
-            <MenuItem>
-              <Link activeClass="active" smooth spy to="testimonials">
-                Testimonials
-              </Link>
+            <MenuItem smooth spy to="testimonials">
+              Testimonials
             </MenuItem>
-            <MenuItem>
-              <Link activeClass="active" smooth spy to="blog">
-                Blog
-              </Link>
+            <MenuItem smooth spy to="blog">
+              Blog
             </MenuItem>
           </Menu>
           <Tools>
@@ -95,7 +82,7 @@ const Menu = styled.div`
   justify-content: space-evenly;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
   position: relative;
   font-size: 20px;
   font-weight: 700;
@@ -105,24 +92,8 @@ const MenuItem = styled.div`
   }
 
   .active {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 3px;
-      bottom: 0;
-      left: 0;
-      background-color: #ff5421;
-      transform-origin: bottom center;
-      transition: transform 0.5s ease-out;
-    }
-  }
-  .active {
-    &::after {
-      transform: scaleX(1);
-      transform-origin: bottom center;
-    }
+    color: blue;
+    border: 2px solid red;
   }
 
   &::after {
@@ -141,23 +112,6 @@ const MenuItem = styled.div`
     transform: scaleX(1);
     transform-origin: bottom center;
   }
-
-  /* &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #ff5421;
-    transform-origin: bottom center;
-    transition: transform 0.5s ease-out;
-  }
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom center;
-  } */
 `;
 
 const Tools = styled.div`
