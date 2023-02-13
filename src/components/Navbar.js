@@ -8,12 +8,17 @@ import LogoBlack from "../logo/logo_black.png";
 
 const Navbar = () => {
   const [showNavBar, setShowNavBar] = useState(false);
+  const [logo, setLogo] = useState(LogoWhite);
 
   const changeBackground = () => {
     console.log("window -->", window.scrollY);
     if (window.scrollY >= 150) {
       setShowNavBar(true);
-    } else setShowNavBar(false);
+      setLogo(LogoBlack);
+    } else {
+      setShowNavBar(false);
+      setLogo(LogoWhite);
+    }
   };
 
   window.addEventListener("scroll", changeBackground);
@@ -22,8 +27,7 @@ const Navbar = () => {
     <>
       <Container showNavBar={showNavBar}>
         <Row>
-          <Logo alt="e-Learn" />
-          {/* <Logo src={`./images/logo/logo_black.png`} alt="e-Learn" /> */}
+          <Logo src={logo} alt="e-Learn" />
           <Menu>
             {/* activeClass={"active"} is not necessary */}
             <MenuItem smooth={"easeOutQuart"} spy to={"home"}>
@@ -72,7 +76,6 @@ const Container = styled.div`
   background: ${({ showNavBar }) => (showNavBar ? "white" : "transparent")};
   color: ${({ showNavBar }) => (showNavBar ? "#000" : "#fff")};
   fill: ${({ showNavBar }) => (showNavBar ? "#000" : "#fff")};
-  box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 0.3);
   box-shadow: ${({ showNavBar }) =>
     showNavBar ? "0px 5px 50px 5px rgba(0, 0, 0, 0.3)" : "none"};
 `;
@@ -86,7 +89,6 @@ const Row = styled.div`
 `;
 
 const Logo = styled.img`
-  src: ${LogoWhite};
   width: 200px;
   padding: 30px 0 30px 0;
   &:hover {
