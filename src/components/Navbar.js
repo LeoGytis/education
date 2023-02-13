@@ -10,8 +10,8 @@ const Navbar = () => {
         <Row>
           <Logo src={`./images/logo/educavo_logo_black.png`} alt="" />
           <Menu>
-            <MenuItem smooth spy to="home">
-              {/* activeClass={active} is not necessary */}
+            {/* activeClass={"active"} is not necessary */}
+            <MenuItem smooth spy to={"home"}>
               Home
             </MenuItem>
             <MenuItem smooth spy to="categories">
@@ -90,12 +90,9 @@ const MenuItem = styled(Link)`
   &:hover {
     cursor: pointer;
   }
-
-  .active {
-    color: blue;
-    border: 2px solid red;
+  &.active {
+    color: #fff;
   }
-
   &::after {
     content: "";
     position: absolute;
@@ -111,6 +108,7 @@ const MenuItem = styled(Link)`
   &:hover::after {
     transform: scaleX(1);
     transform-origin: bottom center;
+    content: ${({ text }) => text || "kazkas"};
   }
 `;
 
