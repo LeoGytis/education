@@ -2,7 +2,7 @@ import Categories from "./components/Categories";
 import Courses from "./components/Courses";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import MainHome from "./components/MainHome";
 import Navbar from "./components/Navbar";
 import NewsLetter from "./components/NewsLetter";
 import NewsUpdate from "./components/NewsUpdate";
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Header />
+      <MainHome />
       <Categories />
       <Courses />
       <Offer />

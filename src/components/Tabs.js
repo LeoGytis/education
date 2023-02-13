@@ -27,10 +27,12 @@ const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  max-width: 960px;
+  max-width: 1270px;
+  margin-bottom: 100px;
 `;
 
 const TabContainer = styled.div`
+  // add flex: 1 1 auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

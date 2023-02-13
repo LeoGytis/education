@@ -1,53 +1,56 @@
 import styled from "styled-components";
 import Tabs from "./Tabs";
 
-const Header = () => {
+const MainHome = () => {
   return (
     <Container id="home">
-      <Header1 bg="#ff5421">Start learning today</Header1>
-      <Header2>Online Courses From Leading Experts</Header2>
-      <Button bg="#ff5421" color="#fff">
-        Find Course
-      </Button>
+      <Row>
+        <Header1 bg="#ff5421">Start learning today</Header1>
+        <Header2>Online Courses From Leading Experts</Header2>
+        <Button>Find Course</Button>
+      </Row>
       <Tabs />
     </Container>
   );
 };
 
-export default Header;
+export default MainHome;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 100px;
-  height: 750px;
   background-image: url("./images/photos/001.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
   background-size: cover;
-  color: white;
+  color: #fff;
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 250px 0 200px 0;
 `;
 
 const Header1 = styled.div`
   font-size: 22px;
   line-height: 30px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ff5421;
   margin-bottom: 22px;
   text-transform: uppercase;
 `;
 
 const Header2 = styled.div`
-  width: 750px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 750px;
   font-size: 70px;
   line-height: 80px;
   font-weight: 700;
@@ -61,12 +64,13 @@ const Button = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  padding: 15px 60px;
-  margin-bottom: 50px;
-  background-color: #ff5421;
-  color: white;
+  padding: 15px 30px !important;
+  background: #ff5421;
+  color: #fff;
   &:hover {
+    background: #171f32;
     opacity: 0.9;
     transform: scale(0.98);
   }
+  transition: all 0.5s ease;
 `;
