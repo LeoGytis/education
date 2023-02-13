@@ -2,34 +2,49 @@ import styled from "styled-components";
 import { ReactComponent as HamburgerSvg } from "../utils/Hamburger.svg";
 import Icons from "../utils/Icons";
 import { Link } from "react-scroll";
+import { useState } from "react";
+import LogoWhite from "../logo/logo.png";
+import LogoBlack from "../logo/logo_black.png";
 
 const Navbar = () => {
+  const [showNavBar, setShowNavBar] = useState(false);
+
+  const changeBackground = () => {
+    console.log("window -->", window.scrollY);
+    if (window.scrollY >= 150) {
+      setShowNavBar(true);
+    } else setShowNavBar(false);
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <>
-      <Container>
+      <Container showNavBar={showNavBar}>
         <Row>
-          <Logo src={`./images/logo/educavo_logo_black.png`} alt="" />
+          <Logo alt="e-Learn" />
+          {/* <Logo src={`./images/logo/logo_black.png`} alt="e-Learn" /> */}
           <Menu>
             {/* activeClass={"active"} is not necessary */}
-            <MenuItem smooth spy to={"home"}>
+            <MenuItem smooth={"easeOutQuart"} spy to={"home"}>
               Home
             </MenuItem>
-            <MenuItem smooth spy to="categories">
+            <MenuItem smooth spy offset={-80} to="categories">
               Categories
             </MenuItem>
-            <MenuItem smooth spy to="courses">
+            <MenuItem smooth spy offset={-80} to="courses">
               Courses
             </MenuItem>
-            <MenuItem smooth spy to="offer">
+            <MenuItem smooth spy offset={-80} to="offer">
               Offer
             </MenuItem>
-            <MenuItem smooth spy to="faq">
+            <MenuItem smooth spy offset={-80} to="faq">
               FAQ
             </MenuItem>
-            <MenuItem smooth spy to="testimonials">
+            <MenuItem smooth spy offset={-120} to="testimonials">
               Testimonials
             </MenuItem>
-            <MenuItem smooth spy to="blog">
+            <MenuItem smooth={"easeOutQuint"} offset={-80} spy to="blog">
               Blog
             </MenuItem>
           </Menu>
@@ -50,12 +65,16 @@ const Navbar = () => {
 export default Navbar;
 
 const Container = styled.div`
-  background-color: lightgrey;
-  box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 0.9);
   z-index: 99;
   position: fixed;
   top: 0px;
   width: 100%;
+  background: ${({ showNavBar }) => (showNavBar ? "white" : "transparent")};
+  color: ${({ showNavBar }) => (showNavBar ? "#000" : "#fff")};
+  fill: ${({ showNavBar }) => (showNavBar ? "#000" : "#fff")};
+  box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: ${({ showNavBar }) =>
+    showNavBar ? "0px 5px 50px 5px rgba(0, 0, 0, 0.3)" : "none"};
 `;
 
 const Row = styled.div`
@@ -64,12 +83,10 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  color: #111;
-  background-color: yellowgreen;
 `;
 
 const Logo = styled.img`
+  src: ${LogoWhite};
   width: 200px;
   padding: 30px 0 30px 0;
   &:hover {
@@ -91,7 +108,7 @@ const MenuItem = styled(Link)`
     cursor: pointer;
   }
   &.active {
-    color: #fff;
+    color: #ff5421;
   }
   &::after {
     content: "";
@@ -108,7 +125,6 @@ const MenuItem = styled(Link)`
   &:hover::after {
     transform: scaleX(1);
     transform-origin: bottom center;
-    content: ${({ text }) => text || "kazkas"};
   }
 `;
 
@@ -136,14 +152,11 @@ const HamContainer = styled.div`
 `;
 
 const Hamburger = styled(HamburgerSvg)`
-  max-height: 20px;
+  max-height: 30px;
   padding: 10px;
-  fill: #111;
-  background-color: none;
-  height: ${({ heigth }) => heigth || "40px"}; //just testing
   &:hover {
     cursor: pointer;
-    fill: ${({ hoverColor }) => hoverColor || "#ff5421"}; //just testing
+    fill: #ff5421;
   }
   transition: all 0.5s ease;
 `;
