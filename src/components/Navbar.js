@@ -73,6 +73,7 @@ const Container = styled.div`
   position: fixed;
   top: 0px;
   width: 100%;
+  height: 100px;
   background: ${({ showNavBar }) => (showNavBar ? "white" : "transparent")};
   color: ${({ showNavBar }) => (showNavBar ? "#000" : "#fff")};
   fill: ${({ showNavBar }) => (showNavBar ? "#000" : "#fff")};

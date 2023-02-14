@@ -22,7 +22,6 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   max-height: 600px;
-  padding-top: 100px;
   padding-bottom: 100px;
 `;
 

@@ -10,12 +10,17 @@ const Courses = () => {
       <CoursesContainer>
         {coursesInfo.map((course, i) => {
           return (
-            <Course>
-              <Image
-                key={`coursecontainer-${i}`}
-                image={`./images/photos/01${-1 + ++i}` + `.jpg`}
-                alt={course.header}
-              />
+            <Course key={`coursegrid-${i}`}>
+              <ImageContainer>
+                <Image
+                  src={`./images/photos/01${-1 + ++i}` + `.jpg`}
+                  alt={course.header}
+                />
+                {/* <Image
+                  image={`./images/photos/01${-1 + ++i}` + `.jpg`}
+                  alt={course.header}
+                /> */}
+              </ImageContainer>
               <PriceTag>{course.price}€</PriceTag>
               <Content>
                 <Rating>
@@ -62,7 +67,7 @@ const Container = styled.div`
 const Header1 = styled.div`
   font-size: 18px;
   line-height: 28px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ff5421;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -87,6 +92,8 @@ const CoursesContainer = styled.div`
 `;
 
 const Course = styled.div`
+  display: flex;
+  flex-direction: column;
   font-size: 36px;
   line-height: 46px;
   font-weight: 800;
@@ -99,16 +106,15 @@ const Course = styled.div`
   overflow: hidden;
 `;
 
-const Image = styled.div`
+const ImageContainer = styled.div`
+  overflow: hidden;
+`;
+
+const Image = styled.img`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 200px;
-  padding: 30px 20px;
-  background-image: url(${({ image }) => image || "none"});
+  height: 250px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
   background-size: cover;
   &:hover {
     cursor: pointer;

@@ -12,9 +12,9 @@ import Testimonial from "./components/Testimonial";
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <MainHome /> */}
-      {/* <Categories /> */}
+      <Navbar />
+      <MainHome />
+      <Categories />
       <Courses />
       <Offer />
       <Faq />
