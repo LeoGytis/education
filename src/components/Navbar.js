@@ -3,7 +3,7 @@ import { ReactComponent as HamburgerSvg } from "../utils/Hamburger.svg";
 import Icons from "../utils/Icons";
 import { Link } from "react-scroll";
 import { useState } from "react";
-import LogoWhite from "../logo/logo.png";
+import LogoWhite from "../logo/logo_white.png";
 import LogoBlack from "../logo/logo_black.png";
 
 const Navbar = () => {

@@ -12,8 +12,8 @@ import Testimonial from "./components/Testimonial";
 function App() {
   return (
     <>
-      <Navbar />
-      <MainHome />
+      {/* <Navbar /> */}
+      {/* <MainHome /> */}
       <Categories />
       <Courses />
       <Offer />

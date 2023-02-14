@@ -71,7 +71,8 @@ const CategoriesContainer = styled.div`
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1270px;
+  color: #fff;
   gap: 10px;
   margin-bottom: 34px;
 `;
@@ -114,21 +115,16 @@ const Icon = styled.img`
   }
 `;
 
-const Text = styled.div`
-  color: #fff;
-`;
+const Text = styled.div``;
 
 const Header = styled.div`
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 5px;
   ${Categorie}:hover & {
-    animation-name: ${waveBeat};
-    animation-duration: 2s;
-    animation-delay: 0.8s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
+    color: #ff5421;
   }
+  transition: color 0.36s ease 0.36s;
 `;
 
 const CoursesCount = styled.div`
@@ -146,7 +142,6 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   background-color: #ff5421;
-  color: #fff;
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);
