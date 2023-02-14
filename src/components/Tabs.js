@@ -10,10 +10,10 @@ const Tabs = () => {
         return (
           <TabContainer key={`tabcontainer-${i}`}>
             <Icon src={`./images/icons/00${++i}` + `.png`} delay={i} alt="" />
-            <Text>
+            <HeaderContainer>
               <Header>{tab.header}</Header>
               <Description>{tab.description}</Description>
-            </Text>
+            </HeaderContainer>
           </TabContainer>
         );
       })}
@@ -26,19 +26,20 @@ export default Tabs;
 const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
   max-width: 1270px;
+  gap: 20px;
+
   margin-bottom: 100px;
 `;
 
 const TabContainer = styled.div`
-  // add flex: 1 1 auto;
+  flex: 0 0 auto;
+  width: 33.33%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background: #171f32;
   padding: 20px 15px;
-  margin: 10px;
   border-radius: 5px;
 
   &:hover {
@@ -50,7 +51,6 @@ const TabContainer = styled.div`
 
 const Icon = styled.img`
   max-width: 50px;
-  width: 100%;
   margin-right: 20px;
   &:hover {
     cursor: pointer;
@@ -64,7 +64,7 @@ const Icon = styled.img`
   animation-iteration-count: infinite;
 `;
 
-const Text = styled.div``;
+const HeaderContainer = styled.div``;
 
 const Header = styled.div`
   display: flex;
