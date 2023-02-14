@@ -14,7 +14,7 @@ function App() {
     <>
       {/* <Navbar /> */}
       {/* <MainHome /> */}
-      <Categories />
+      {/* <Categories /> */}
       <Courses />
       <Offer />
       <Faq />

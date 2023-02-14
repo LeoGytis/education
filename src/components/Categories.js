@@ -45,8 +45,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 90px;
-  padding-bottom: 100px;
+  padding: 100px 0;
 `;
 
 const Header1 = styled.div`
@@ -141,9 +140,12 @@ const Button = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  color: #fff;
   background-color: #ff5421;
   &:hover {
+    background: #171f32;
     opacity: 0.9;
     transform: scale(0.98);
   }
+  transition: all 0.5s ease;
 `;

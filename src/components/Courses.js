@@ -34,8 +34,8 @@ const Courses = () => {
                     {course.students}
                   </StudentsCount>
                   <LessonsCount>
-                    {course.lessons}
                     <LessonsIcon name={"lessons"} />
+                    {course.lessons}
                   </LessonsCount>
                 </Counter>
               </Content>
@@ -54,10 +54,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding-top: 100px;
-  padding-bottom: 100px;
   background-color: #f9f8f8;
+  width: 100%;
+  padding: 100px 0;
 `;
 
 const Header1 = styled.div`
@@ -82,7 +81,7 @@ const CoursesContainer = styled.div`
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1270px;
   gap: 20px;
   margin-bottom: 34px;
 `;
@@ -119,8 +118,11 @@ const Image = styled.div`
 `;
 
 const PriceTag = styled.div`
+  display: flex;
+  align-items: center;
+  height: 30px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   color: #fff;
   background: #ff5421;
   border-radius: 5px;
@@ -183,13 +185,12 @@ const Counter = styled.div`
 const StudentsCount = styled.div`
   font-size: 14px;
   font-weight: 400;
-
   color: black;
 `;
 
 const LessonsCount = styled.div`
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
 `;
 
@@ -204,5 +205,5 @@ const LessonsIcon = styled(Icons)`
   font-size: 20px;
   margin-bottom: -3px;
   color: #ff5421;
-  margin-left: 8px;
+  margin-right: 8px;
 `;
