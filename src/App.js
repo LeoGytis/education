@@ -16,7 +16,7 @@ function App() {
       <MainHome />
       <Categories />
       <Courses />
-      <Offer />
+      {/* <Offer /> // sekantis */}
       <Faq />
       <Testimonial />
       <NewsUpdate />
